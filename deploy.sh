@@ -1,5 +1,5 @@
 function ssh_cmd () {
-  ssh -o LogLevel=error -o StrictHostKeyChecking=no $REMOTE_USER:$REMOTE_PASSWORD@$REMOTE_IP "$1"
+  sshpass -p $REMOTE_PASSWORD ssh -o LogLevel=error -o StrictHostKeyChecking=no $REMOTE_USER@$REMOTE_IP "$1"
 }
 
 REMOTE_PATH="/var/www/AMNEZIA.ORG"
