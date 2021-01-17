@@ -1,3 +1,9 @@
+  var linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.0/AmneziaVPN.exe';
+  var linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.0/AmneziaVPN.dmg';
+
+  var mainLink = document.getElementById('main-link');
+  var mainLinkFooter = document.getElementById('main-link-footer');
+  var secondLink = document.getElementById('link-personal');
 
   var platform = navigator.userAgent;
   var deviceWin = true;
@@ -13,13 +19,19 @@ if (document.getElementById("main") != null){
   if (deviceWin) {
     document.getElementById("btn-personal").setAttribute('src', "img/windows_fff.svg")
     document.getElementById("link-img-personal").setAttribute('src', "img/mac.svg")
-    document.getElementById("link-personal").innerHTML  = 'Версия для Mac';
+    document.getElementById("link-personal").innerHTML  = 'Скачать версию для Mac';
     document.getElementById("link-footer").innerHTML  = 'Для Windows. Полностью бесплатно.';
+    mainLink.href = linkWin;
+    mainLinkFooter.href = linkWin;
+    secondLink.href = linkMac;
   } else {
     document.getElementById("btn-personal").setAttribute('src', "img/mac_fff.svg")
     document.getElementById("link-img-personal").setAttribute('src', "img/windows.svg")
-    document.getElementById("link-personal").innerHTML  = 'Версия для Windows';
+    document.getElementById("link-personal").innerHTML  = 'Скачать версию для Windows';
     document.getElementById("link-footer").innerHTML  = 'Для Mac. Полностью бесплатно.';
+    mainLink.href = linkMac;
+    mainLinkFooter.href = linkMac;
+    secondLink.href = linkWin;
   }
 
   document.getElementById("header-list-1").addEventListener('click',  function() {;

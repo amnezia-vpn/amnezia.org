@@ -120,16 +120,18 @@ h2 {
   border-radius: 4px;
   text-align: center;
   color: #FFFFFF;
-  padding: 13px 19px;
+  padding: 13px 19px 13px;
   display: block;
   margin-right: auto;
   font-weight: 400;
-
   width: fit-content;
   width: -moz-fit-content;
 }
 
-
+.btn-personal {
+  position: relative;
+  padding-left: 47px;
+}
 
 .btn:hover,
 .btn:active,
@@ -156,6 +158,11 @@ h2 {
 .download {
   margin: 40px 0;
 }
+
+.download > .text-personal {
+  padding-top: 2px;
+}
+
 .download-footer{
   text-align: center;
 }
@@ -189,15 +196,17 @@ h2 {
 .img-os-btn {
   width: 15px;
   height: 15px;
-  margin-left: 2px;
 }
 
 .img-os {
-  margin-top: 3px;
+  margin-left: 4px;
 }
 
 .img-os-btn {
-  padding-right: 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 21px;
 }
 
 .text-footer{
