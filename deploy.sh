@@ -5,6 +5,7 @@ function ssh_cmd () {
 REMOTE_PATH="/var/www/AMNEZIA.ORG"
 echo "===> Clean folders"
 ssh_cmd "rm -rf $REMOTE_PATH/*"
+ssh_cmd "ls -al $REMOTE_PATH/"
 
 echo "===> Deploy"
 ssh_cmd "cd $REMOTE_PATH && wget https://github.com/amnezia-vpn/amnezia.org/archive/master.zip"
