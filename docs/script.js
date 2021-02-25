@@ -50,6 +50,14 @@ if (document.getElementById("main") != null){
 }
 
 if (document.getElementById("instruction") != null){
+  if (deviceWin) {
+    document.getElementById("link-footer").innerHTML  = 'Для Windows. Полностью бесплатно.';
+    mainLinkFooter.href = linkWin;
+  } else {
+    document.getElementById("link-footer").innerHTML  = 'Для Mac. Полностью бесплатно.';
+    mainLinkFooter.href = linkMac;
+  }
+  
   document.getElementById("instr-step-1").addEventListener('click',  function() {;
         document.getElementById("instr-1").classList.toggle('hidden');
         document.getElementById("icon1").classList.toggle('minus');
@@ -75,5 +83,4 @@ if (document.getElementById("instruction") != null){
         document.getElementById("server-instr-3").classList.toggle('hidden');
         document.getElementById("server-icon3").classList.toggle('minus');
   })
- 
 }
