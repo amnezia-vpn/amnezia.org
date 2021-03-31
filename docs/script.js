@@ -14,7 +14,6 @@
   if (iPhone.test(platform) || iPad.test(platform) || navigator.platform.indexOf('Win') < 0) {
       deviceWin = false;
   }
-console.log("deviceWin", deviceWin)
 if (document.getElementById("main") != null){
   if (deviceWin) {
     document.getElementById("btn-personal").setAttribute('src', "img/windows_fff.svg")
@@ -34,24 +33,26 @@ if (document.getElementById("main") != null){
     secondLink.href = linkWin;
   }
 
-  document.getElementById("header-list-1").addEventListener('click',  function() {;
-        document.getElementById("technical-text-1").classList.toggle('hidden');
-        document.getElementById("icon1").classList.toggle('minus');
-  })
-  document.getElementById("header-list-2").addEventListener('click',  function() {
-        document.getElementById("technical-text-2").classList.toggle('hidden');
-        document.getElementById("icon2").classList.toggle('minus');
-  })
-  document.getElementById("header-list-3").addEventListener('click',  function() {
-        document.getElementById("technical-text-3").classList.toggle('hidden');
-        document.getElementById("icon3").classList.toggle('minus');
-  })
-  document.getElementById("header-list-4").addEventListener('click',  function() {
-        document.getElementById("technical-text-4").classList.toggle('hidden');
-        document.getElementById("icon4").classList.toggle('minus');
-  })
-  
+  // document.getElementById("header-list-1").addEventListener('click',  function() {;
+  //       document.getElementById("technical-text-1").classList.toggle('hidden');
+  //       document.getElementById("icon1").classList.toggle('minus');
+  // })
+  // document.getElementById("header-list-2").addEventListener('click',  function() {
+  //       document.getElementById("technical-text-2").classList.toggle('hidden');
+  //       document.getElementById("icon2").classList.toggle('minus');
+  // })
+  // document.getElementById("header-list-3").addEventListener('click',  function() {
+  //       document.getElementById("technical-text-3").classList.toggle('hidden');
+  //       document.getElementById("icon3").classList.toggle('minus');
+  // })
+  // document.getElementById("header-list-4").addEventListener('click',  function() {
+  //       document.getElementById("technical-text-4").classList.toggle('hidden');
+  //       document.getElementById("icon4").classList.toggle('minus');
+  // })
+
 }
+
+
 
 if (document.getElementById("instruction") != null){
   if (deviceWin) {
@@ -61,7 +62,7 @@ if (document.getElementById("instruction") != null){
     document.getElementById("link-footer").innerHTML  = 'Для Mac. Полностью бесплатно.';
     mainLinkFooter.href = linkMac;
   }
-  
+
   document.getElementById("instr-step-1").addEventListener('click',  function() {;
         document.getElementById("instr-1").classList.toggle('hidden');
         document.getElementById("icon1").classList.toggle('minus');
@@ -78,7 +79,7 @@ if (document.getElementById("instruction") != null){
         document.getElementById("instr-4").classList.toggle('hidden');
         document.getElementById("icon4").classList.toggle('minus');
   })
-  
+
   document.getElementById("server-instr-step-1").addEventListener('click',  function() {;
         document.getElementById("server-instr-1").classList.toggle('hidden');
         document.getElementById("server-icon1").classList.toggle('minus');
