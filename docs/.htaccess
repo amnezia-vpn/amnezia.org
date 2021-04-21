@@ -1,7 +1,7 @@
-RewriteEngine on
-RewriteCond %{HTTP:Accept-Language} (en) [NC]
-RewriteRule .* amnezia.org/1 [L]
+RewriteEngine On
 
+RewriteCond %{HTTP:Accept-Language} (ru|uk|be|kk|mo|ka|et|bg|az) [NC]
+RewriteRule ^$ https://ru.amnezia.org/ [L,R=301]
 
-RewriteCond %{HTTP:Accept-Language} (ru) [NC]
-RewriteRule .* amnezia.org/2 [L]
+RewriteCond %{REQUEST_URI} ^/$ [NC]
+RewriteRule ^$ https://en.amnezia.org/ [L,R=301]
