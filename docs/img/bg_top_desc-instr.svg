@@ -1,0 +1,29 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<g style="mix-blend-mode:multiply">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M922.454 354.749C962.622 439.946 917.998 562.974 992.265 621.969C1066.9 681.256 1184.66 669.778 1277.78 637.007C1363.75 606.755 1416.94 526.508 1470.51 453.668C1515.8 392.078 1539.75 323.478 1561.44 251.269C1586.44 168.075 1628.3 84.5884 1606.12 2.24144C1581.5 -89.1477 1527.02 -185.263 1435.6 -215.901C1345.41 -246.124 1255.11 -166.013 1159.99 -147.268C973.303 -110.475 817.647 -46.7238 839.017 136.387C850.828 237.599 884.625 274.513 922.454 354.749Z" fill="url(#paint0_radial)"/>
+</g>
+<g style="mix-blend-mode:multiply">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1443.33 512.352C1342.19 579.625 1238.33 667.646 1121 638.701C999.322 608.682 926.025 491.29 882.876 374.086C841.214 260.919 826.413 128.641 896.747 29.56C962.09 -62.4902 1090.09 -56.4936 1201.43 -74.6688C1313.65 -92.9875 1431.51 -136.158 1525.23 -73.0304C1633.3 -0.233601 1712.45 127.928 1694.35 257.357C1677.04 381.051 1547.85 442.835 1443.33 512.352Z" fill="url(#paint1_radial)"/>
+</g>
+<g style="mix-blend-mode:darken">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1525.56 625.716C1407.41 678.403 1289.99 578.735 1168.54 534.75C1039.82 488.134 862.635 496.9 815.423 368.54C767.456 238.126 893.494 118.484 973.53 4.55038C1051.5 -106.45 1122.34 -239.166 1256.5 -259.346C1399.15 -280.804 1538.91 -203.715 1632.83 -94.6226C1722.51 9.54734 1746.35 150.035 1726.09 286.113C1705.74 422.787 1651.95 569.351 1525.56 625.716Z" fill="url(#paint2_radial)"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1029.14 -53.6347) rotate(53.156) scale(716.798 719.126)">
+<stop stop-color="#A18CD1"/>
+<stop offset="1" stop-color="#FBC2EB"/>
+</radialGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1388.03 116.938) rotate(165.255) scale(141.694 122.833)">
+<stop offset="1" stop-color="#1F7277"/>
+</radialGradient>
+<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1433.63 415.992) rotate(174.111) scale(563.098 544.976)">
+<stop stop-color="#FF5858"/>
+<stop offset="1" stop-color="#F09819"/>
+</radialGradient>
+<clipPath id="clip0">
+<rect width="1920" height="720" fill="white" transform="translate(-320)"/>
+</clipPath>
+</defs>
+</svg>

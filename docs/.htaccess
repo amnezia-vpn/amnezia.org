@@ -1,8 +1,7 @@
 RewriteEngine on
- # редирект на русскоязычную версию сайта
- RewriteCond %{REQUEST_URI} ^/$ [NC]
- RewriteCond %{HTTP:Accept-Language} (ru|uk|be|kk|mo|ka|et|bg|az) [NC]
- RewriteRule .* https://ru.amnezia.org/ [R=302,L]
- # редирект на англоязычную версию сайта для всех остальных языков
- RewriteCond %{REQUEST_URI} ^/$ [NC]
- RewriteRule .* https://en.amnezia.org/ [R=302,L]
+RewriteCond %{HTTP:Accept-Language} (en) [NC]
+RewriteRule .* amnezia.org/1 [L]
+
+
+RewriteCond %{HTTP:Accept-Language} (ru) [NC]
+RewriteRule .* amnezia.org/2 [L]
