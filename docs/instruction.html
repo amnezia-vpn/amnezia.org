@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+	<meta http-equiv="refresh" content="2;URL=https://en.amnezia.org">
+	<script>
+		const browserLang = window.navigator.language;
+
+		const isLang = function (lang) {
+			return browserLang.indexOf(lang) + 1;
+		}
+
+		if (
+			isLang('ru') ||
+			isLang('uk') ||
+			isLang('be') ||
+			isLang('kk') ||
+			isLang('mo') ||
+			isLang('ka') ||
+			isLang('et') ||
+			isLang('bg') ||
+			isLang('az')
+		) {
+			window.location = 'https://ru.amnezia.org/instruction.html';
+		} else {
+			window.location = 'https://en.amnezia.org/instruction.html';
+		}
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
