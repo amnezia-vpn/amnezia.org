@@ -54,7 +54,7 @@
 			<div class="block block-about-wrapper">
 				<div class="block-about-inner">
 					<div class="images_app images_app-about">
-						<img src="img/mobile_app-3.png" />
+						<img src="img/mobile_app-3.jpg" />
 					</div>
 					<div class="block-about">
 						<div class="block__content">
@@ -96,8 +96,8 @@
 						<div class="block__content">
 							<img src="img/icon_availability-2.svg" class="img-availability" width="60" height="49"/>
 							<div class="content content-about">
-								<h2 class="header header-availability">С&nbsp;Amnezia вы&nbsp;сами-себе провайдер VPN</h2>
-								<div class="text">Amnezia VPN это бесплатное приложение с&nbsp;открытым исходным кодом для создания вашего собственного VPN на&nbsp;вашем сервере. Ваши данные принадлежат только вам. Вы&nbsp;оплачиваете только свой сервер, который контролируете.</div>
+								<h2 class="header header-availability">With Amnezia, you are your own VPN provider</h2>
+								<div class="text">Amnezia VPN is a free open source application for creating your own VPN on your server. Your data belongs only to you. You pay only for your server, which you control.</div>
 							</div>
 						</div>
 				</div>
@@ -105,43 +105,43 @@
 
 			<div class="block block-information">
 				<div class="block-information-inner">
-					<h2 class="header">Для доступа к&nbsp;заблокированным сайтам</h2>
-					<div class="text">Позволяет открывать через VPN только отдельные сайты. Так вы&nbsp;сможете использовать более простой и&nbsp;дешевый сервер и&nbsp;не&nbsp;снижать скорость работы с&nbsp;большинством сайтов.</div>
-					<h2 class="header header-private">И&nbsp;для шифрования всех соединений, если нужна полная приватность</h2>
-					<div class="text">Для нас ваша приватность&nbsp;&mdash; приоритет. Приложение не&nbsp;собирает и&nbsp;не&nbsp;передаёт никакой статистики, логов и&nbsp;другой информации о&nbsp;пользователях и&nbsp;их&nbsp;данных.</div>
+					<h2 class="header">To access blocked sites</h2>
+					<div class="text">Allows only individual sites to be opened via VPN. This way you can use a simpler and cheaper server and not slow down the speed of work with most sites.</div>
+					<h2 class="header header-private">And to encrypt all connections if you need complete privacy</h2>
+					<div class="text">Your privacy is our priority. The application does not collect or transmit any statistics, logs and other information about users and their data.</div>
 				</div>
 			</div>
 
 			<div class="images_app images_app-provider">
-				<img src="img/mobile_app-1.svg" />
-				<img src="img/mobile_app-2.svg" />
+				<img src="img/mobile_app-1.jpg" />
+				<img src="img/mobile_app-2.jpg" />
 			</div>
 
 			<div class="block block-how-work">
 				<div class="block-how-work_wrapper">
-					<h2 class="header header-how-work">Как работает Amnezia</h2>
+					<h2 class="header header-how-work">How Amnezia works</h2>
 						<div class="block-how-work_inner">
 							<div class="block__content">
 								<img src="img/icon-how-work-1.svg" class="img-about" width="100" height="100"/>
 								<div class="content content-about">
-									<h2 class="header header-sm">При первом запуске</h2>
-									<div class="text">Клиент подключается к&nbsp;серверу по&nbsp;SSH, устанавливает Docker и&nbsp;запускает серверные контейнеры Amnezia.</div>
-									<div class="text">Для каждого протокола запускается отдельный контейнер, генерируются ключи и&nbsp;корневой сертификат. В&nbsp;один клик из&nbsp;клиента можно переустановить контейнеры, таким образом переинициализировав PKI. Так&nbsp;же установленные на&nbsp;сервере контейнеры можно удалить в&nbsp;один клик.</div>
-									<div class="text">Контейнеры не&nbsp;имеют смонтированных папок с&nbsp;хоста, не&nbsp;предоставляют никакой API для управления (пользователями, например), не&nbsp;пишут логи внутри себя, и, вообще, не&nbsp;делают ничего, кроме своей прямой задачи&nbsp;&mdash; обеспечивать подключение соответствующего VPN протокола.</div>
+									<h2 class="header header-sm">On first launch</h2>
+									<div class="text">The client connects to the server via SSH, installs Docker and starts the Amnezia server containers.</div>
+									<div class="text">For each protocol, a separate container is launched, keys and a root certificate are generated. With one click from the client, you can reinstall the containers, thus reinitializing the PKI. Containers installed on the server can also be removed in one click.</div>
+									<div class="text">Containers do not have mounted folders from the host, do not provide any API for management (by users, for example), do not write logs inside themselves, and, in general, do nothing other than their direct task — to ensure the connection of the corresponding VPN protocol.</div>
 								</div>
 							</div>
 							<div class="block__content">
 								<img src="img/icon-how-work-2.svg" class="img-about" width="100" height="100"/>
 								<div class="content content-about">
-									<h2 class="header header-sm">При каждом следующем подключении </h2>
-									<div class="text">Клиент сам себе генерирует новый ключ и&nbsp;сертификат и&nbsp;забрасывает его на&nbsp;сервер. Подключение OpenVPN&nbsp;&mdash; по&nbsp;сертификату. В&nbsp;текущем релизе используется OpenVPN over ShadowSocks.</div>
+									<h2 class="header header-sm">Each time you connect</h2>
+									<div class="text">The client generates a new key and certificate for itself and uploads it to the server. OpenVPN connection — by certificate. The current release uses OpenVPN over ShadowSocks.</div>
 								</div>
 							</div>
 							<div class="block__content">
 								<img src="img/icon-how-work-3.svg" class="img-about" width="100" height="100"/>
 								<div class="content content-about">
-									<h2 class="header header-sm">Требования</h2>
-									<div class="text">Windows начиная с&nbsp;версии 7, MacOS с&nbsp;версии 10.13. Amnezia работает с&nbsp;любыми серверами с&nbsp;операционой системой Ubuntu (официально поддерживаемая версия&nbsp;&mdash; 18.04) и&nbsp;Debian&nbsp;10.</div>
+									<h2 class="header header-sm">Requirements</h2>
+									<div class="text">Windows from version 7, MacOS from version 10.13. Amnezia works with any Ubuntu server (officially supported version is 18.04) and Debian 10.</div>
 								</div>
 							</div>
 						</div>
@@ -152,11 +152,11 @@
 				<div class="block-footer-inner">
 					<img src="img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
 					<div class="download download-footer">
-						<a class="btn btn-footer" id="main-link-footer" href="#">Скачать приложение</a>
-						<div class="text text-small text-footer"><span class="text-os" id="link-footer">Для Windows. Полностью бесплатно.</span></div>
+						<a class="btn btn-footer" id="main-link-footer" href="#">Download app</a>
+						<div class="text text-small text-footer"><span class="text-os" id="link-footer">For Windows. Completely free.</span></div>
 					</div>
-					<div class="text text-footer"><img src="img/github.svg" class="img-github" width="20" height="20"/><a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Исходный код на Github</a></div>
-					<img src="img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
+					<div class="text text-footer"><img src="img/github.svg" class="img-github" width="20" height="20"/><a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Source code on Github</a></div>
+					<img src="img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Privacy Accelerator Graduate"/>
 
 
 				</div>
