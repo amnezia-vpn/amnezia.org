@@ -18,16 +18,16 @@ if (document.getElementById("main") != null){
   if (deviceWin) {
     document.getElementById("btn-personal").setAttribute('src', "img/windows_fff.svg")
     document.getElementById("link-img-personal").setAttribute('src', "img/mac.svg")
-    document.getElementById("link-personal").innerHTML  = 'Скачать версию для Mac';
-    document.getElementById("link-footer").innerHTML  = 'Для Windows. Полностью бесплатно.';
+    document.getElementById("link-personal").innerHTML  = 'Download Mac version';
+    document.getElementById("link-footer").innerHTML  = 'For Windows. Completely free.';
     mainLink.href = linkWin;
     mainLinkFooter.href = linkWin;
     secondLink.href = linkMac;
   } else {
     document.getElementById("btn-personal").setAttribute('src', "img/mac_fff.svg")
     document.getElementById("link-img-personal").setAttribute('src', "img/windows.svg")
-    document.getElementById("link-personal").innerHTML  = 'Скачать версию для Windows';
-    document.getElementById("link-footer").innerHTML  = 'Для Mac. Полностью бесплатно.';
+    document.getElementById("link-personal").innerHTML  = 'Download Windows version';
+    document.getElementById("link-footer").innerHTML  = 'For Mac. Completely free.';
     mainLink.href = linkMac;
     mainLinkFooter.href = linkMac;
     secondLink.href = linkWin;
@@ -56,10 +56,10 @@ if (document.getElementById("main") != null){
 
 if (document.getElementById("instruction") != null){
   if (deviceWin) {
-    document.getElementById("link-footer").innerHTML  = 'Для Windows. Полностью бесплатно.';
+    document.getElementById("link-footer").innerHTML  = 'For Windows. Completely free.';
     mainLinkFooter.href = linkWin;
   } else {
-    document.getElementById("link-footer").innerHTML  = 'Для Mac. Полностью бесплатно.';
+    document.getElementById("link-footer").innerHTML  = 'For Mac. Completely free.';
     mainLinkFooter.href = linkMac;
   }
 
