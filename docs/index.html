@@ -1,167 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru" prefix="og: http://ogp.me/ns#">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
-		<title>Amnezia. Ваш персональный приватный VPN</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+<head>
+	<meta http-equiv="refresh" content="2;URL=https://en.amnezia.org">
+	<script>
+		const browserLang = window.navigator.language;
 
-		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-		<link rel="manifest" href="site.webmanifest">
-		<meta name="msapplication-config" content="browserconfig.xml" />
-		<meta name="msapplication-TileColor" content="#100A44">
-		<meta name="theme-color" content="#100A44">
+		const isLang = function (lang) {
+			return browserLang.indexOf(lang) + 1;
+		}
 
-		<!--
-		<meta property="og:type" content="website"/>
-		<meta property="og:title" content="Amnezia"/>
-		<meta property="og:url" content="https://yandex.ru/"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА САЙТ
-		<meta property="og:image" content="https://openrunet.org/img/OG-image.png"/> !!!!!!1 ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
-		<meta property="og:site_name" content="Amnezia">
-		<meta property="og:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
-		<meta name="twitter:title" content="Amnezia"/>
-		<meta name="twitter:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
-		<meta name="twitter:image" content="https://openrunet.org/img/OG-image.png"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
-		<meta name="twitter:card" content="summary_large_image"/>
-		<meta name="twitter:site" content="@RAmnezia"/>
-		-->
-	</head>
-	<body>
-		<section class="about" id="main">
-			<div class="block block-personal_vpn">
-				<div class="bg-top">
-				</div>
-				<div class="block-personal_vpn-inner">
-						<a href="index.html" class="href href-logo"><img src="img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/></a>
-						<h2 class="header header-personal">Ваш персональный приватный VPN</h2>
-						<div class="text text-personal">Бесплатный сервис для создания личного VPN на&nbsp;вашем сервере. Помогает получать доступ к&nbsp;заблокированному контенту, не&nbsp;раскрывая конфиденциальность даже провайдерам VPN.</div>
-						<div class="download-app">
-							<div class="download" id="download-personal">
-								<a class="btn btn-personal" id="main-link" href="#"><img src="img/windows_fff.svg" id="btn-personal" class="img-os-btn" width="15" height="15"/>Скачать приложение</a>
-								<div class="text text-small text-personal"><a class="text-os" id="link-personal" href="#">Скачать версию для Windows</a> <img src="img/windows.svg" id="link-img-personal" class="img-os" width="15" height="15"/></div>
-							</div>
-							<div class="text text-instruction"><a href="instruction.html">Инструкция, как запустить свой VPN</a></div>
-						</div>
-					</div>
-			</div>
+		if (
+			isLang('ru') ||
+			isLang('uk') ||
+			isLang('be') ||
+			isLang('kk') ||
+			isLang('mo') ||
+			isLang('ka') ||
+			isLang('et') ||
+			isLang('bg') ||
+			isLang('az')
+		) {
+			window.location = 'https://ru.amnezia.org/';
+		} else {
+			window.location = 'https://en.amnezia.org/';
+		}
+	</script>
 
-			<div class="block block-about-wrapper">
-				<div class="block-about-inner">
-					<div class="images_app images_app-about">
-						<img src="img/mobile_app-3.png" />
-					</div>
-					<div class="block-about">
-						<div class="block__content">
-							<img src="img/icon-about_1.svg" class="img-about" width="60" height="60"/>
-							<div class="content content-about">
-								<h2 class="header">Простой</h2>
-								<div class="text">Указываете ip-адрес, логин и&nbsp;пароль вашего сервера, а&nbsp;программа автоматически настроит его для подключения по&nbsp;VPN.</div>
-							</div>
-						</div>
-						<div class="block__content">
-							<img src="img/icon-about_2.svg" class="img-about" width="60" height="60"/>
-							<div class="content content-about">
-								<h2 class="header">Безопасный</h2>
-								<div class="text">Публикуем в&nbsp;свободный доступ не&nbsp;только исходные коды клиентской части, но&nbsp;и&nbsp;<a href="https://github.com/amnezia-vpn" target="_blank">исходные коды</a> серверной части.</div>
-							</div>
-						</div>
-						<div class="block__content">
-							<img src="img/icon-about_3.svg" class="img-about" width="60" height="60"/>
-							<div class="content content-about">
-								<h2 class="header">Бесплатный</h2>
-								<div class="text">Мы&nbsp;не&nbsp;являемся VPN сервисом, вы&nbsp;не&nbsp;подключаетесь к&nbsp;нашим серверам и&nbsp;не&nbsp;платите нам ничего. Для подключения используете свой или приобретаете любой VPS у&nbsp;любого провайдера.</div>
-								<div class="text"><a href="instruction.html" target="_blank">Узнать, как получить свой сервер для VPN</a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+</head>
 
-			<div class="block block-data_availability">
-					<div class="block-data_availability-inner">
-						<div class="block__content">
-							<img src="img/icon_availability-1.svg" class="img-availability" width="60" height="34"/>
-							<div class="content content-about">
-								<h2 class="header header-availability">Обычные VPN знают о&nbsp;вас всё</h2>
-								<div class="text">С&nbsp;обычным VPN ваши действия в&nbsp;интернете недоступны для вашего интернет-провайдера, киберпреступников или спецслужб, но&nbsp;доступны сервису, где вы&nbsp;купили VPN.</div>
-								<div class="text">Более того, бесплатные VPN могут продавать ваши данные третьим лицам: пароли, историю посещённых сайтов и&nbsp;т.п.</div>
-							</div>
-						</div>
-						<div class="block__content">
-							<img src="img/icon_availability-2.svg" class="img-availability" width="60" height="49"/>
-							<div class="content content-about">
-								<h2 class="header header-availability">С&nbsp;Amnezia вы&nbsp;сами-себе провайдер VPN</h2>
-								<div class="text">Amnezia VPN это бесплатное приложение с&nbsp;открытым исходным кодом для создания вашего собственного VPN на&nbsp;вашем сервере. Ваши данные принадлежат только вам. Вы&nbsp;оплачиваете только свой сервер, который контролируете.</div>
-							</div>
-						</div>
-				</div>
-			</div>
+<body>
 
-			<div class="block block-information">
-				<div class="block-information-inner">
-					<h2 class="header">Для доступа к&nbsp;заблокированным сайтам</h2>
-					<div class="text">Позволяет открывать через VPN только отдельные сайты. Так вы&nbsp;сможете использовать более простой и&nbsp;дешевый сервер и&nbsp;не&nbsp;снижать скорость работы с&nbsp;большинством сайтов.</div>
-					<h2 class="header header-private">И&nbsp;для шифрования всех соединений, если нужна полная приватность</h2>
-					<div class="text">Для нас ваша приватность&nbsp;&mdash; приоритет. Приложение не&nbsp;собирает и&nbsp;не&nbsp;передаёт никакой статистики, логов и&nbsp;другой информации о&nbsp;пользователях и&nbsp;их&nbsp;данных.</div>
-				</div>
-			</div>
+</body>
 
-			<div class="images_app images_app-provider">
-				<img src="img/mobile_app-1.svg" />
-				<img src="img/mobile_app-2.svg" />
-			</div>
-
-			<div class="block block-how-work">
-				<div class="block-how-work_wrapper">
-					<h2 class="header header-how-work">Как работает Amnezia</h2>
-						<div class="block-how-work_inner">
-							<div class="block__content">
-								<img src="img/icon-how-work-1.svg" class="img-about" width="100" height="100"/>
-								<div class="content content-about">
-									<h2 class="header header-sm">При первом запуске</h2>
-									<div class="text">Клиент подключается к&nbsp;серверу по&nbsp;SSH, устанавливает Docker и&nbsp;запускает серверные контейнеры Amnezia.</div>
-									<div class="text">Для каждого протокола запускается отдельный контейнер, генерируются ключи и&nbsp;корневой сертификат. В&nbsp;один клик из&nbsp;клиента можно переустановить контейнеры, таким образом переинициализировав PKI. Так&nbsp;же установленные на&nbsp;сервере контейнеры можно удалить в&nbsp;один клик.</div>
-									<div class="text">Контейнеры не&nbsp;имеют смонтированных папок с&nbsp;хоста, не&nbsp;предоставляют никакой API для управления (пользователями, например), не&nbsp;пишут логи внутри себя, и, вообще, не&nbsp;делают ничего, кроме своей прямой задачи&nbsp;&mdash; обеспечивать подключение соответствующего VPN протокола.</div>
-								</div>
-							</div>
-							<div class="block__content">
-								<img src="img/icon-how-work-2.svg" class="img-about" width="100" height="100"/>
-								<div class="content content-about">
-									<h2 class="header header-sm">При каждом следующем подключении </h2>
-									<div class="text">Клиент сам себе генерирует новый ключ и&nbsp;сертификат и&nbsp;забрасывает его на&nbsp;сервер. Подключение OpenVPN&nbsp;&mdash; по&nbsp;сертификату. В&nbsp;текущем релизе используется OpenVPN over ShadowSocks.</div>
-								</div>
-							</div>
-							<div class="block__content">
-								<img src="img/icon-how-work-3.svg" class="img-about" width="100" height="100"/>
-								<div class="content content-about">
-									<h2 class="header header-sm">Требования</h2>
-									<div class="text">Windows начиная с&nbsp;версии 7, MacOS с&nbsp;версии 10.13. Amnezia работает с&nbsp;любыми серверами с&nbsp;операционой системой Ubuntu (официально поддерживаемая версия&nbsp;&mdash; 18.04) и&nbsp;Debian&nbsp;10.</div>
-								</div>
-							</div>
-						</div>
-				</div>
-			</div>
-
-			<div class="block block-footer">
-				<div class="block-footer-inner">
-					<img src="img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
-					<div class="download download-footer">
-						<a class="btn btn-footer" id="main-link-footer" href="#">Скачать приложение</a>
-						<div class="text text-small text-footer"><span class="text-os" id="link-footer">Для Windows. Полностью бесплатно.</span></div>
-					</div>
-					<div class="text text-footer"><img src="img/github.svg" class="img-github" width="20" height="20"/><a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Исходный код на Github</a></div>
-					<img src="img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
-
-
-				</div>
-			</div>
-		</section>
-		<script src="script.js"></script>
-	</body>
 </html>
