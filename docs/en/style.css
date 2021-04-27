@@ -940,6 +940,6 @@ h3 {
   }
 }
 
-.images_app img {
-  padding: 0 20px;
+.images_app.images_app-provider img {
+  padding: 20px;
 }
