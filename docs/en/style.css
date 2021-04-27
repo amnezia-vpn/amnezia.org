@@ -938,3 +938,7 @@ h3 {
     right: 0;
   }
 }
+
+.images_app img {
+  padding: 0 20px;
+}
