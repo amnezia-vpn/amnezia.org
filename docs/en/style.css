@@ -885,6 +885,7 @@ h3 {
 .lang_link,
 .lang_title {
   color: #fff;
+  font-weight: normal;
 
   cursor: pointer;
 }
