@@ -75,10 +75,6 @@ if (document.getElementById("instruction") != null){
         document.getElementById("instr-3").classList.toggle('hidden');
         document.getElementById("icon3").classList.toggle('minus');
   })
-  document.getElementById("instr-step-4").addEventListener('click',  function() {;
-        document.getElementById("instr-4").classList.toggle('hidden');
-        document.getElementById("icon4").classList.toggle('minus');
-  })
 
   document.getElementById("server-instr-step-1").addEventListener('click',  function() {;
         document.getElementById("server-instr-1").classList.toggle('hidden');
@@ -92,8 +88,5 @@ if (document.getElementById("instruction") != null){
         document.getElementById("server-instr-3").classList.toggle('hidden');
         document.getElementById("server-icon3").classList.toggle('minus');
   })
-  document.getElementById("server-instr-step-4").addEventListener('click',  function() {;
-        document.getElementById("server-instr-4").classList.toggle('hidden');
-        document.getElementById("server-icon4").classList.toggle('minus');
-  })
+
 }
