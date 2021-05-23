@@ -11,12 +11,12 @@ $(document).ready(function ($) {
 	$body = $('body');
 
 	//developer funcitons
-	pageWidget([
-		'index',
-		'faq_en',
-		'faq_ru'
-]);
-	getAllClasses('html','.elements_list');
+// 	pageWidget([
+// 		'index',
+// 		'faq_en',
+// 		'faq_ru'
+// ]);
+// 	getAllClasses('html','.elements_list');
 
 
 	function accordion(title, content) {
