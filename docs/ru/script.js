@@ -1,5 +1,5 @@
-var linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.7/AmneziaVPN_1.7.4_x64.exe';
-var linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.7/AmneziaVPN_1.7.4.dmg';
+  var linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.0_x64.exe';
+  var linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.0.dmg';
 
   var mainLink = document.getElementById('main-link');
   var mainLinkFooter = document.getElementById('main-link-footer');
