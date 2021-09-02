@@ -1,0 +1,24 @@
+name: Deploy workflow
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+    branches:
+    - master
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Deploy-Action:
+    name: Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Install sshpass
+      run: sudo apt-get install sshpass
+
+        
+    - name: Deploy Project
+      run: bash deploy.sh
+        
