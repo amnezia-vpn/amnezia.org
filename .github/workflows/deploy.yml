@@ -14,11 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    
+      
     - name: Install sshpass
       run: sudo apt-get install sshpass
 
-        
     - name: Deploy Project
+      env:
+        REMOTE_IP: ${{ secrets.REMOTE_IP }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
+        REMOTE_PASSWORD : ${{ secrets.REMOTE_PASSWORD  }}
+
       run: bash deploy.sh
         
