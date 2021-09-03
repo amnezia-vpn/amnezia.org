@@ -1,119 +1,157 @@
-var linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1_x64.exe';
-var linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1.dmg';
+//-------------------- HOSTING LIST
 
-var mainLink = document.getElementById('main-link');
-var mainLinkFooter = document.getElementById('main-link-footer');
-var secondLink = document.getElementById('link-personal');
+let hList = [
+    {
+        name: 'Amazon',
+        url: 'https://aws.amazon.com/ru/ec2',
+        legalAddress: 'USA',
+        price: 'from ~$2/month',
+        locations: `USA (5), Cape Town, Honk-Kong, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokio, Canada, Frankfurt, 
+            Ireland, London, Milan, Paris, Stockholm, Bahrain, Sao Paulo`,
+        payment: `Mastercard/Visa, PayPal Cash Card`,
+        imgFolderName: 'Amazon',
+        imgStep1Count: '14',
+        imgStep2Count: '2',
+    },
+    {
+        name: 'DigitalOcean',
+        url: 'https://www.digitalocean.com',
+        legalAddress: 'USA',
+        price: 'from $5.00/month',
+        locations: `New York, San Francisco, Amsterdam, Frankfurt, London, Toronto, Singapore, Bangalore`,
+        payment: `Visa, Mastercard, American Express, Discover, PayPal`,
+        imgFolderName: 'Digital_Ocean',
+        imgStep1Count: '9',
+        imgStep2Count: '2',
+    },
+    {
+        name: 'robovps.biz',
+        url: 'https://www.robovps.biz',
+        legalAddress: 'Russia',
+        price: 'from $2.02/month',
+        locations: 'Germany, Russia',
+        payment: `Fast payment systems, Webmoney WMP, Robocassa, YooMoney, Paypal-RUB, Paypal-USD, Paypal-EURO, Paysera, 
+            Tinkoff, Halva, Euroset salons, Svyaznoy salons, Alfabank, Russian standard, Promsvyazbank, cashless payments, 
+            Sberbank online, WeChat, CoinPayment`,
+        imgFolderName: 'ROBOVPS',
+        imgStep1Count: '14',
+        imgStep2Count: '3',
+    },
+    {
+        name: 'cinfu.com',
+        url: 'https://www.cinfu.com',
+        legalAddress: 'Seychelles',
+        price: 'from $4.76/month',
+        locations: `USA, Bulgaria, France, Germany, Netherlands`,
+        payment: `Credit card/Debit card, PayPal, AdvCash Mir, Skril, Litecoin, Ethereum & other Cryptocurrencies, 
+            Paxum, EpayFasaPay, NixMoney, Bitcoin, Brick (Powered by Paymentwall), Paymentwall, Payeer (30+ other payment option)`,
+        imgFolderName: 'CINFU',
+        imgStep1Count: '17',
+        imgStep2Count: '3',
+    },
+    {
+        name: 'hostwinds.com',
+        url: 'https://www.hostwinds.com',
+        legalAddress: 'USA',
+        price: 'from $4.99/month',
+        locations: `USA, Netherlands`,
+        payment: `Mastercard/Visa, PayPal, Discover, American Express, Bitcoin`,
+        imgFolderName: 'HOSTWINDS',
+        imgStep1Count: '17',
+        imgStep2Count: '3',
+    },
+];
 
-var platform = navigator.userAgent;
-var deviceWin = true;
+//-------------------- SCRIPT START
 
-var iPhone = /iPhone/g;
-var iPad = /iPad/g;
+$(document).ready(function () {
 
-if (iPhone.test(platform) || iPad.test(platform) || navigator.platform.indexOf('Win') < 0) {
-    deviceWin = false;
-}
-if (document.getElementById("main") != null) {
-    if (deviceWin) {
-        document.getElementById("btn-personal").setAttribute('src', "img/windows_fff.svg");
-        document.getElementById("link-img-personal").setAttribute('src', "img/mac.svg");
-        document.getElementById("link-personal").innerHTML = 'Download Mac version';
-        document.getElementById("link-footer").innerHTML = 'For Windows. Completely free.';
-        mainLink.href = linkWin;
-        mainLinkFooter.href = linkWin;
-        secondLink.href = linkMac;
-    } else {
-        document.getElementById("btn-personal").setAttribute('src', "img/mac_fff.svg");
-        document.getElementById("link-img-personal").setAttribute('src', "img/windows.svg");
-        document.getElementById("link-personal").innerHTML = 'Download Windows version';
-        document.getElementById("link-footer").innerHTML = 'For Mac. Completely free.';
-        mainLink.href = linkMac;
-        mainLinkFooter.href = linkMac;
-        secondLink.href = linkWin;
+    let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1_x64.exe';
+    let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1.dmg';
+    let deviceWin = true;
+    let iPhone = /iPhone/g;
+    let iPad = /iPad/g;
+    if (iPhone.test(navigator.userAgent) || iPad.test(navigator.userAgent) || navigator.platform.indexOf('Win') < 0) deviceWin = false;
+
+    // -------------------- FOR BOTH PAGES
+
+    $('#link-footer').html(deviceWin ? 'For Windows. Completely free.' : 'For Mac. Completely free.');
+    $('#main-link-footer').attr('href', deviceWin ? linkWin : linkMac);
+
+    // -------------------- FOR MAIN PAGE
+
+    $('#main-link').attr('href', deviceWin ? linkWin : linkMac);
+    $('#btn-personal').attr('src', deviceWin ? "img/windows_fff.svg" : "img/mac_fff.svg");
+    $('#link-img-personal').attr('src', deviceWin ? "img/mac.svg" : "img/windows.svg");
+    $('#link-personal').html(deviceWin ? 'Download Mac version' : 'Download Windows version');
+    $('#link-personal').attr('href', deviceWin ? linkMac : linkWin);
+
+    // -------------------- HOSTING INSTRUCTIONS GENERATION
+
+    function generateInstructions(arr) {
+
+        function generateImgTags(hostingData, step, imgCount) {
+            let imgTagsHtml = ``;
+            for (let i = 1; i <= imgCount; i++) {
+                imgTagsHtml += `<img src="img/instructions/step_${step}/${hostingData.imgFolderName}/${i}.png">`
+            }
+            return imgTagsHtml;
+        }
+
+        arr.map(el => {
+            $('.step-1-inner').append(
+                `<div class="server">
+                <h3><a target="_blank" href=${el.url}>${el.name}</a></h3>
+                <div class="price">${el.price}</div>
+                <div class="descr">                   
+                    Legal address - ${el.legalAddress}<br> 
+                    Hosting - ${el.locations}<br>
+                    Payment methods - ${el.payment}
+                </div>
+                <div class="instr-list" onselectstart="return false" onmousedown="return false">
+                    <span class="icon"></span>
+                    <span>Instruction</span>
+                </div>
+                <div class="text instr-text hidden">    
+                    <div class="fotorama" data-allowfullscreen="native">
+                        ${generateImgTags(el, 1, el.imgStep1Count)}                        
+                    </div>
+                </div>
+            </div>`
+            );
+
+            $('.step-2-inner').append(
+                `<div class="server-instr">
+                <div class="instr-list onselectstart="return false" onmousedown="return false"">
+                    <span class="icon"></span>
+                    <span>Manual for ${el.name}</span>
+                </div>
+                <div class="text instr-text hidden">
+                    <div class="fotorama" data-allowfullscreen="native">
+                         ${generateImgTags(el, 2, el.imgStep2Count)}            
+                    </div>
+                </div>
+            </div>`
+            );
+        });
+
+        // -------------------- HOSTING CARD EXPAND EVENTS
+
+        $("#instruction").on('click', '.instr-list', function () {
+            $(this).parent().children('.instr-text').toggleClass('hidden');
+            $(this).find('.icon').toggleClass('minus');
+        });
     }
+    // if instructions page
+    if ($("#instruction").length) generateInstructions(hList);
 
-    // document.getElementById("header-list-1").addEventListener('click',  function() {;
-    //       document.getElementById("technical-text-1").classList.toggle('hidden');
-    //       document.getElementById("icon1").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-2").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-2").classList.toggle('hidden');
-    //       document.getElementById("icon2").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-3").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-3").classList.toggle('hidden');
-    //       document.getElementById("icon3").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-4").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-4").classList.toggle('hidden');
-    //       document.getElementById("icon4").classList.toggle('minus');
-    // })
+    // -------------------- DOWNLOAD LINK AUTOSCROLL FOR INSTRUCTIONS PAGE
 
-}
-
-if (document.getElementById("instruction") != null) {
-    if (deviceWin) {
-        document.getElementById("link-footer").innerHTML = 'For Windows. Completely free.';
-        mainLinkFooter.href = linkWin;
-    } else {
-        document.getElementById("link-footer").innerHTML = 'For Mac. Completely free.';
-        mainLinkFooter.href = linkMac;
-    }
-
-    // -------------------- STEP 1
-
-    document.getElementById("instr-step-1").addEventListener('click', function () {
-        document.getElementById("instr-1").classList.toggle('hidden');
-        document.getElementById("icon1").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-2").addEventListener('click', function () {
-        document.getElementById("instr-2").classList.toggle('hidden');
-        document.getElementById("icon2").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-3").addEventListener('click', function () {
-        document.getElementById("instr-3").classList.toggle('hidden');
-        document.getElementById("icon3").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-4").addEventListener('click', function () {
-        document.getElementById("instr-4").classList.toggle('hidden');
-        document.getElementById("icon4").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-5").addEventListener('click', function () {
-        document.getElementById("instr-5").classList.toggle('hidden');
-        document.getElementById("icon5").classList.toggle('minus');
+    $('#btnAnchor').click(function (e) {
+        e.preventDefault();
+        let id = $(this).attr("href");
+        let top = $(id).offset().top;
+        $("body,html").animate({scrollTop: top}, 500);
     });
 
-    // -------------------- STEP 2
-
-    document.getElementById("server-instr-step-1").addEventListener('click', function () {
-        document.getElementById("server-instr-1").classList.toggle('hidden');
-        document.getElementById("server-icon1").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-2").addEventListener('click', function () {
-        document.getElementById("server-instr-2").classList.toggle('hidden');
-        document.getElementById("server-icon2").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-3").addEventListener('click', function () {
-        document.getElementById("server-instr-3").classList.toggle('hidden');
-        document.getElementById("server-icon3").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-4").addEventListener('click', function () {
-        document.getElementById("server-instr-4").classList.toggle('hidden');
-        document.getElementById("server-icon4").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-5").addEventListener('click', function () {
-        document.getElementById("server-instr-5").classList.toggle('hidden');
-        document.getElementById("server-icon5").classList.toggle('minus');
-    });
-}
-
-
-var btnAnchor = document.querySelector("#btnAnchor");
-
-btnAnchor.addEventListener("click", function (event) {
-    event.preventDefault();
-    var id = $(this).attr("href"),
-        top = $(id).offset().top;
-    $("body,html").animate({scrollTop: top}, 500);
 });

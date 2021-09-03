@@ -1,126 +1,176 @@
-var linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1_x64.exe';
-var linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1.dmg';
+//-------------------- HOSTING LIST
 
-var mainLink = document.getElementById('main-link');
-var mainLinkFooter = document.getElementById('main-link-footer');
-var secondLink = document.getElementById('link-personal');
+let hList = [
+    {
+        name: 'robovps.biz',
+        url: 'https://www.robovps.biz',
+        legalAddress: 'Россия',
+        price: 'от $2,02/мес',
+        lang: 'Сайт на русском языке',
+        locations: 'Германия, Россия',
+        payment: `Системы быстрых платежей, Webmoney WMP, Робокасса, ЮMoney,РБК мани, Paypal-RUB, Paypal-USD, Paypal-EURO, 
+            Paysera, Tinkoff, Халва, В салонах Евросеть, В салонах Связной, Альфабанк, Русский стандарт, Промсвязьбанк, 
+            безналичный расчет, Сбербанк онлайн, WeChat, CoinPayment`,
+        imgFolderName: 'ROBOVPS',
+        imgStep1Count: '16',
+        imgStep2Count: '3',
+    },
+    {
+        name: 'cinfu.com',
+        url: 'https://www.cinfu.com',
+        legalAddress: 'Сейшельские острова',
+        price: 'от $4,76/мес',
+        lang: 'Сайт на английском языке',
+        locations: 'США, Болгария, Франция, Германия, Нидерланды',
+        payment: `Credit card/Debit card, PayPal, AdvCash Mir, Skril, Litecoin, Ethereum & other Cryptocurrencies, 
+            Paxum, EpayFasaPay, NixMoney, Bitcoin, Brick (Powered by Paymentwall), Paymentwall, Payeer (30+ other payment option)`,
+        imgFolderName: 'CINFU',
+        imgStep1Count: '17',
+        imgStep2Count: '3',
+    },
+    {
+        name: 'hostwinds.com',
+        url: 'https://www.hostwinds.com',
+        legalAddress: 'США',
+        price: 'от $4,99/мес',
+        lang: 'Сайт на английском языке',
+        locations: `США, Нидерланды`,
+        payment: `Mastercard/Visa, PayPal, Discover, American Express, Bitcoin`,
+        imgFolderName: 'HOSTWINDS',
+        imgStep1Count: '17',
+        imgStep2Count: '3',
+    },
+    {
+        name: 'Inferno Solutions',
+        url: 'https://cp.inferno.name/cart.php?gid=56',
+        legalAddress: 'Великобритания',
+        price: 'от $5,00/мес (первый месяц скидка по промокоду Amnezia)',
+        lang: 'Сайт на русском языке',
+        locations: `США, Нидерланды, Германия, Эстония, Польша, Чехия, Швеция, Швецария, Великобритания, США, 
+            Канада, Россия, Украина, Сингапур, Автралия, Япония, ОАЭ`,
+        payment: `Mastercard/Visa, PayPal, Bitcoin, ЮMoney, МИР, Qiwi, RBK.money, Advcash, Связной, Beeline, Payeer, IBOX, PaySera`,
+        imgFolderName: 'Inferno_Solutions',
+        imgStep1Count: '8',
+        imgStep2Count: '2',
+    },
+    {
+        name: 'Amazon',
+        url: 'https://aws.amazon.com/ru/ec2',
+        legalAddress: 'США',
+        price: 'от ~$2/мес',
+        lang: 'Сайт на русском языке',
+        locations: `США (5), Кейптаун, Гонконг, Мумбаи, Осака, Сеул, Сингапур, Сидней, Токио, Канада, Франкфурт, 
+            Ирландия, Лондон, Милан, Париж, Стокгольм, Бахрейн, Сан-Паулу`,
+        payment: `Mastercard/Visa, PayPal Cash Card`,
+        imgFolderName: 'Amazon',
+        imgStep1Count: '14',
+        imgStep2Count: '2',
+    },
+    {
+        name: 'DigitalOcean',
+        url: 'https://www.digitalocean.com',
+        legalAddress: 'США',
+        price: 'от $5,00/мес',
+        lang: 'Сайт на английском языке',
+        locations: `Нью-Йорк, Сан-Франциско, Амстердам, Франкфурт, Лондон, Торонто, Сингапур, Бангалор`,
+        payment: `Mastercard/Visa, PayPal`,
+        imgFolderName: 'Digital_Ocean',
+        imgStep1Count: '9',
+        imgStep2Count: '2',
+    },
+];
 
-var platform = navigator.userAgent;
-var deviceWin = true;
+//-------------------- SCRIPT START
 
-var iPhone = /iPhone/g;
-var iPad = /iPad/g;
+$(document).ready(function () {
 
-if (iPhone.test(platform) || iPad.test(platform) || navigator.platform.indexOf('Win') < 0) {
-    deviceWin = false;
-}
-if (document.getElementById("main") != null) {
-    if (deviceWin) {
-        document.getElementById("btn-personal").setAttribute('src', "img/windows_fff.svg");
-        document.getElementById("link-img-personal").setAttribute('src', "img/mac.svg");
-        document.getElementById("link-personal").innerHTML = 'Скачать версию для Mac';
-        document.getElementById("link-footer").innerHTML = 'Для Windows. Полностью бесплатно.';
-        mainLink.href = linkWin;
-        mainLinkFooter.href = linkWin;
-        secondLink.href = linkMac;
-    } else {
-        document.getElementById("btn-personal").setAttribute('src', "img/mac_fff.svg");
-        document.getElementById("link-img-personal").setAttribute('src', "img/windows.svg");
-        document.getElementById("link-personal").innerHTML = 'Скачать версию для Windows';
-        document.getElementById("link-footer").innerHTML = 'Для Mac. Полностью бесплатно.';
-        mainLink.href = linkMac;
-        mainLinkFooter.href = linkMac;
-        secondLink.href = linkWin;
+    let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1_x64.exe';
+    let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1.dmg';
+    let deviceWin = true;
+    let iPhone = /iPhone/g;
+    let iPad = /iPad/g;
+    if (iPhone.test(navigator.userAgent) || iPad.test(navigator.userAgent) || navigator.platform.indexOf('Win') < 0) deviceWin = false;
+
+    // -------------------- FOR BOTH PAGES
+
+    $('#link-footer').html(deviceWin ? 'Для Windows. Полностью бесплатно.' : 'Для Mac. Полностью бесплатно.');
+    $('#main-link-footer').attr('href', deviceWin ? linkWin : linkMac);
+
+    // -------------------- FOR MAIN PAGE
+
+    $('#main-link').attr('href', deviceWin ? linkWin : linkMac);
+    $('#btn-personal').attr('src', deviceWin ? "img/windows_fff.svg" : "img/mac_fff.svg");
+    $('#link-img-personal').attr('src', deviceWin ? "img/mac.svg" : "img/windows.svg");
+    $('#link-personal').html(deviceWin ? 'Скачать версию для Mac' : 'Скачать версию для Windows');
+    $('#link-personal').attr('href', deviceWin ? linkMac : linkWin);
+
+    // -------------------- HOSTING INSTRUCTIONS GENERATION
+
+    function generateInstructions(arr) {
+
+        function generateImgTags(hostingData, step, imgCount) {
+            let imgTagsHtml = ``;
+            for (let i = 1; i <= imgCount; i++) {
+                imgTagsHtml += `<img src="img/instructions/step_${step}/${hostingData.imgFolderName}/${i}.png">`
+            }
+            return imgTagsHtml;
+        }
+
+        arr.map(el => {
+            $('.step-1-inner').append(
+                `<div class="server">
+                <h3><a target="_blank" href=${el.url}>${el.name}</a></h3>
+                <div class="price">${el.price}</div>
+                <div class="descr">
+                    ${el.lang}<br>
+                    Юр. адрес - ${el.legalAddress}<br> 
+                    Хостинги - ${el.locations}<br>
+                    Методы оплаты - ${el.payment}
+                </div>
+                <div class="instr-list" onselectstart="return false" onmousedown="return false">
+                    <span class="icon"></span>
+                    <span>Инструкция</span>
+                </div>
+                <div class="text instr-text hidden">    
+                    <div class="fotorama" data-allowfullscreen="native">
+                        ${generateImgTags(el, 1, el.imgStep1Count)}                        
+                    </div>
+                </div>
+            </div>`
+            );
+
+            $('.step-2-inner').append(
+                `<div class="server-instr">
+                <div class="instr-list onselectstart="return false" onmousedown="return false"">
+                    <span class="icon"></span>
+                    <span>Инструкция для ${el.name}</span>
+                </div>
+                <div class="text instr-text hidden">
+                    <div class="fotorama" data-allowfullscreen="native">
+                         ${generateImgTags(el, 2, el.imgStep2Count)}            
+                    </div>
+                </div>
+            </div>`
+            );
+        });
+
+        // -------------------- HOSTING CARD EXPAND EVENTS
+
+        $("#instruction").on('click', '.instr-list', function () {
+            $(this).parent().children('.instr-text').toggleClass('hidden');
+            $(this).find('.icon').toggleClass('minus');
+        });
     }
+    // if instructions page
+    if ($("#instruction").length) generateInstructions(hList);
 
-    // document.getElementById("header-list-1").addEventListener('click',  function() {;
-    //       document.getElementById("technical-text-1").classList.toggle('hidden');
-    //       document.getElementById("icon1").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-2").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-2").classList.toggle('hidden');
-    //       document.getElementById("icon2").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-3").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-3").classList.toggle('hidden');
-    //       document.getElementById("icon3").classList.toggle('minus');
-    // })
-    // document.getElementById("header-list-4").addEventListener('click',  function() {
-    //       document.getElementById("technical-text-4").classList.toggle('hidden');
-    //       document.getElementById("icon4").classList.toggle('minus');
-    // })
-}
+    // -------------------- DOWNLOAD LINK AUTOSCROLL FOR INSTRUCTIONS PAGE
 
-if (document.getElementById("instruction") != null) {
-    if (deviceWin) {
-        document.getElementById("link-footer").innerHTML = 'Для Windows. Полностью бесплатно.';
-        mainLinkFooter.href = linkWin;
-    } else {
-        document.getElementById("link-footer").innerHTML = 'Для Mac. Полностью бесплатно.';
-        mainLinkFooter.href = linkMac;
-    }
-
-    // -------------------- STEP 1
-
-    document.getElementById("instr-step-1").addEventListener('click', function () {
-        document.getElementById("instr-1").classList.toggle('hidden');
-        document.getElementById("icon1").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-2").addEventListener('click', function () {
-        document.getElementById("instr-2").classList.toggle('hidden');
-        document.getElementById("icon2").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-3").addEventListener('click', function () {
-        document.getElementById("instr-3").classList.toggle('hidden');
-        document.getElementById("icon3").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-4").addEventListener('click', function () {
-        document.getElementById("instr-4").classList.toggle('hidden');
-        document.getElementById("icon4").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-5").addEventListener('click', function () {
-        document.getElementById("instr-5").classList.toggle('hidden');
-        document.getElementById("icon5").classList.toggle('minus');
-    });
-    document.getElementById("instr-step-6").addEventListener('click', function () {
-        document.getElementById("instr-6").classList.toggle('hidden');
-        document.getElementById("icon6").classList.toggle('minus');
+    $('#btnAnchor').click(function (e) {
+        e.preventDefault();
+        let id = $(this).attr("href");
+        let top = $(id).offset().top;
+        $("body,html").animate({scrollTop: top}, 500);
     });
 
-    // -------------------- STEP 2
-
-    document.getElementById("server-instr-step-1").addEventListener('click', function () {
-        document.getElementById("server-instr-1").classList.toggle('hidden');
-        document.getElementById("server-icon1").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-2").addEventListener('click', function () {
-        document.getElementById("server-instr-2").classList.toggle('hidden');
-        document.getElementById("server-icon2").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-3").addEventListener('click', function () {
-        document.getElementById("server-instr-3").classList.toggle('hidden');
-        document.getElementById("server-icon3").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-4").addEventListener('click', function () {
-        document.getElementById("server-instr-4").classList.toggle('hidden');
-        document.getElementById("server-icon4").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-5").addEventListener('click', function () {
-        document.getElementById("server-instr-5").classList.toggle('hidden');
-        document.getElementById("server-icon5").classList.toggle('minus');
-    });
-    document.getElementById("server-instr-step-6").addEventListener('click', function () {
-        document.getElementById("server-instr-6").classList.toggle('hidden');
-        document.getElementById("server-icon6").classList.toggle('minus');
-    });
-}
-
-
-var btnAnchor = document.querySelector("#btnAnchor");
-
-btnAnchor.addEventListener("click", function (event) {
-    event.preventDefault();
-    var id = $(this).attr("href"),
-        top = $(id).offset().top;
-    $("body,html").animate({scrollTop: top}, 500);
 });
