@@ -17,7 +17,7 @@ let hList = [
     },
     {
         name: 'cinfu.com',
-        url: 'https://www.cinfu.com',
+        url: 'https://panel.cinfu.com/aff.php?aff=1395',
         legalAddress: 'Сейшельские острова',
         price: 'от $4,76/мес',
         lang: 'Сайт на английском языке',

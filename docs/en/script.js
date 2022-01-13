@@ -39,7 +39,7 @@ let hList = [
     },
     {
         name: 'cinfu.com',
-        url: 'https://www.cinfu.com',
+        url: 'https://panel.cinfu.com/aff.php?aff=1395',
         legalAddress: 'Seychelles',
         price: 'from $4.76/month',
         locations: `USA, Bulgaria, France, Germany, Netherlands`,
