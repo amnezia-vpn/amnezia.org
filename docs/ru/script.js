@@ -3,7 +3,7 @@
 let hList = [
     {
         name: 'robovps.biz',
-        url: 'https://www.robovps.biz',
+        url: 'https://www.robovps.biz/?ref=24892',
         legalAddress: 'Россия',
         price: 'от $2,02/мес',
         lang: 'Сайт на русском языке',
