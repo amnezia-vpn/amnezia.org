@@ -51,7 +51,7 @@ let hList = [
     },
     {
         name: 'hostwinds.com',
-        url: 'https://www.hostwinds.com',
+        url: 'https://www.hostwinds.com/13349.html',
         legalAddress: 'USA',
         price: 'from $4.99/month',
         locations: `USA, Netherlands`,
