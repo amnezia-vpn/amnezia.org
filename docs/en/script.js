@@ -5,7 +5,7 @@ let hList = [
         name: 'Amazon',
         url: 'https://aws.amazon.com/ru/ec2',
         legalAddress: 'USA',
-        price: 'from ~$2/month',
+        price: 'from ~$5/month, extra traffic charges may apply',
         locations: `USA (5), Cape Town, Honk-Kong, Mumbai, Osaka, Seoul, Singapore, Sydney, Tokio, Canada, Frankfurt, 
             Ireland, London, Milan, Paris, Stockholm, Bahrain, Sao Paulo`,
         payment: `Mastercard/Visa, PayPal Cash Card`,
