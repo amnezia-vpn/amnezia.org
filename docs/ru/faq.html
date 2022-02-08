@@ -48,6 +48,104 @@
               <ul class="faq_list">
                 <li class="faq_item">
                   <div class="faq_title_w">
+                    <h3 class="section_title">Можно ли доверять AmneziaVPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Да. <a href="https://github.com/amnezia-vpn/desktop-client" target="_blank">AmneziaVPN</a> является проектом с открытым исходным кодом и разворачивает на сервере приложения <a href="https://github.com/OpenVPN/" target="_blank">OpenVPN</a>, <a href="https://github.com/shadowsocks" target="_blank">ShadowSocks</a>, <a href="https://www.wireguard.com/repositories/" target="_blank">WireGuard</a> и/или <a href="https://github.com/cbeuw/Cloak" target="_blank">Cloak</a> по желанию пользователя. У пользователя есть возможность как оперативно развернуть, так и полностью удалить любой из установленных на сервер VPN сервисов, а также полностью очистить сервер от всех установленных Амнезией сервисов всего в один клик. Вопрос в другом - доверяете ли Вы серверу, который собираетесь использовать? ;)</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Как именно происходит установка?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>На ваш VPS будет установлен <a href="https://www.docker.com/" target="_blank">Docker</a>. С его помощью будет собран контейнер, в котором и будет произведена установка выбранной базы (<a href="https://github.com/amnezia-vpn/desktop-client/tree/master/client/server_scripts" target="_blank">OpenVPN  и т.д.</a>). Благодаря этому AmneziaVPN легко обновляет всю необходимую начинку на сервере и позволяет без проблем изменить конфигурацию вашего VPN. Также, данный способ позволяет не "засорять" хостовую систему вашего сервера.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Почему требуется сервер с KVM?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>AmneziaVPN использует Docker для изолированного развертывания вашего VPN сервера. Не с каждым типом виртуализации возможно использование Docker, однако KVM это точно позволяет. С другими типами виртуализации работа с Docker может оказаться невозможной как в силу ограничений определенного типа виртуализации, так и в силу конфигурации от поставщика VPS.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Можно ли использовать авторизацию по ключам для AmneziaVPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Можно, поддерживается авторизация как по паролю, так и по ключам. Поддерживаемые типы OpenSSH ключей: <b>RSA</b> <i>(2048, 3072, 4096)</i> и <b>ECDSA</b> <i>(nistp256)</i> </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Как при авторизации по ключу AmneziaVPN установит все, не зная при этом пароля учетной записи?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>На текущий момент подразумевается что в учетке, указанной для логина на сервер, не будет запрашиваться пароль для операций с <b>sudo</b>
+                    <!-- TODO. Как сделать такую учетку можете посмотреть в [ССЫЛКА НА ИНСТРУКЦИЮ]--></p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Какие клиенты можно использовать на Windows, Linux, MacOS, Android, iOS?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <!-- TODO -->
+                    <p>Ответа на этот вопрос еще нет, но он обязательно появится в будущем</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">У меня случилась ошибка при использовании AmneziaVPN, что делать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Связаться с разработчиками (через <a href="mailto:support@amnezia.org">support@amnezia.org</a> или в <a href="https://t.me/amnezia_vpn" target="_blank">Telegram чате</a>) предоставив им логи работы программы. Достать логи можно по следующим путям: </p>
+                    <p>На Windows:
+                      <ul>
+                        <li>- C:\Users\%USERNAME%\AppData\Roaming\AmneziaVPN.ORG\AmneziaVPN\log</li>
+                        <li>- C:\ProgramData\AmneziaVPN\log</li>
+                      </ul>
+                    </p>
+                    <p>На MacOS:
+                      <ul>
+                        <li>- /$HOME/Library/Application\ Support/AmneziaVPN.ORG/AmneziaVPN/</li>
+                        <li>- /var/log/AmneziaVPN/AmneziaVPN-service.log</li>
+                      </ul>
+                    </p>
+                    <p>На Android: Здесь логи пока что не пишутся, но в будущем версия с логами обязательно появится!
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Зачем может понадобиться сменить DNS сервер в настройках и какой лучше выбрать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>По умолчанию AmneziaVPN использует <a href="https://1.1.1.1/dns/#setup-instructions" target="_blank">DNS сервера Cloudflare</a>. В сети есть множество других сервисов, которые помимо скорости и стабильности предоставляют дополнительный функционал: альтернативные протоколы для использования, блокировку рекламных и/или вредоносных доменов, "семейный режим", а некоторые сервисы могут поддерживать дополнительные доменные зоны. Помимо всего прочего, возможно, у Вас уже есть предпочитаемый DNS сервис, который Вы хотели бы поставить. А еще у AmneziaVPN есть DNS-контейнер, благодаря которому будут доступны <a href="https://sites.emercoin.com/" target="_blank">сайты из <i>emerDNS</i></a></p>
+                    <p>Инструкция по смене используемого DNS в AmneziaVPN: <a href="guide/change-dns/" target="_blank">Как поменять DNS сервер?</a> </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3 class="section_title">Для чего предназначена кнопка "Clear client cached profile"?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>По умолчанию AmneziaVPN кэширует данные (сертификаты и ключи) от настроенного VPN сервера для быстрого подключения напрямую к с серверу. Данная кнопка сбрасывает этот кэш, в результате будут сгенерированы новые сертификаты с ключами, которые посредством SSH подключения будут помещены на сервер и уже только потом произойдет подключение. Необходимо использовать при смене сервера (если установлено на нескольких VPS), при обновлении клиента или сервера. Может потребоваться при изменениях настроек контейнеров.</p>
+                  </div>
+                </li>
+                <!-- Predefined templates for FAQ <li class="faq_item">
+                  <div class="faq_title_w">
                     <h3 class="section_title">Вопрос №1</h3>
                     <div class="faq_title_btn"></div>
                   </div>
@@ -74,7 +172,7 @@
                   <div class="faq_content">
                     <p>3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices consequat eu a rutrum egestas turpis ut volutpat. Id a convallis eleifend gravida arcu nec. Volutpat neque egestas diam augue mi accumsan justo magna. Donec sit laoreet elementum, porttitor id tellus.</p>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
