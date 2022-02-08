@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Amnezia. Ваш персональный приватный VPN</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#100A44">
+    <meta name="theme-color" content="#100A44">
+
+    <!--
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Amnezia"/>
+        <meta property="og:url" content="https://yandex.ru/"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА САЙТ
+        <meta property="og:image" content="https://openrunet.org/img/OG-image.png"/> !!!!!!1 ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta property="og:site_name" content="Amnezia">
+        <meta property="og:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:title" content="Amnezia"/>
+        <meta name="twitter:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:image" content="https://openrunet.org/img/OG-image.png"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@RAmnezia"/>
+        -->
+</head>
+
+<body>
+    <section class="instruction" id="instruction">
+        <div class="block-top-wrapper">
+            <div class="block block-top-guide">
+                <div class="section_in">
+                    <div class="block-top-inner">
+                        <a href="/index.html" class="href href-logo">
+                            <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
+                        </a>
+                        <h2 class="header header-block-top">Инструкция по автоматической установке</h2>
+                    </div>
+                    <div class="lang_block">
+                        <div class="lang_title"><span>Русский</span><span>Ru</span>
+                            <div class="lang_arrow_w">
+                                <img src="/img/icons/angle-right.svg" alt="" class="lang_arrow">
+                            </div>
+                        </div>
+                        <ul class="lang_list">
+                            <li class="lang_item">
+                                <a href="https://en.amnezia.org/instruction.html" class="lang_link">
+                                    <span>English</span>
+                                    <span>En</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-1-inner">
+                <h2 class="header header-step">Шаг 1. Запустите AmneziaVPN</h2>
+                <div class="text text-step">
+                  Первое что Вы увидите - предложение подключиться к уже настроенному раннее серверу (если таковой есть). Если Вы начинаете пользоваться AmneziaVPN впервые - внизу нажимаем на "Настроить собственный сервер" (Setup your own server).
+                </div>
+                <div class="images_app-provider" style="background: none;">
+                  <img src="./screens/step1-first-start.png" alt=""/>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+          <div class="step-2-inner">
+              <h2 class="header header-step">Шаг 2. Заполнение данных для подключения</h2>
+              <div class="text text-step">
+                В следующем окне заполните данные для подключения к серверу: 
+                <ul>
+                    <li>IP-адрес, если меняли порт для SSH - укажите его через двоеточие после IP</li>
+                    <li>Имя пользователя под которым будет производиться настройка сервера</li>
+                    <li>Пароль для пользователя, либо SSH-ключ: для этого жмем "Подключить с помощью SSH ключа" (Connect using SSH key) и в поле ввода вставляем содержимое приватного ключа</li>
+                </ul>
+                Примечание: в рамках текущей инструкции будет использоваться связка <u>root + пароль</u>, однако Вы можете использовать и других созданных пользователей, предварительно настроив их <!-- TODO: ссылка на настройку пользователя для амнезии -->, а также использовать авторизацию по ключу <!-- TODO: ссылка на инструкцию по работе с ключами --> - для этого нажмите на "Подключиться используя SSH-ключ"(Connect using SSH key) и поле пароля заменится на поле для вставки приватного ключа.
+              </div>
+              <div class="images_app-provider" style="background: none;">
+                <img src="./screens/step2-credentials.png" alt=""/>
+              </div>
+          </div>
+        </div>
+
+        <div class="block block-guide-step">
+          <div class="step-2-inner">
+              <h2 class="header header-step">Шаг 3. Выбор конфигурации</h2>
+              <div class="text text-step">
+                <p>На данном этапе первое что Вы увидите - вопрос о том, что хотите использовать: ручную установку или автоматическую. Данная инструкция подразумевает автоматическую установку, поэтому ее и выбираем, нажав на "Запустить мастер установки" (Run Setup Wizard).</p>
+                <p>Чтобы выбрать какую-либо конфигурацию, AmneziaVPN задает вам вопрос - какой уровень цензуры вас беспокоит?
+                    <ul>
+                        <li>Выберите "Низкий уровень цензуры" (Low censorship level), чтобы просто получить VPN для шифрования траффика (классический VPN). В данном случае на сервер будет установлен контейнер с OpenVPN.</li>
+                        <li>Выберите "Средний уровень цензуры" (Medium censorship level), чтобы получить сравнительно гибкое решение на случай, когда блокируются сайты, но не VPN. В данном случае на сервер будет установлен контейнер с OpenVPN и ShadowSocks.</li>
+                        <li>Выберите "Высокий уровень цензуры" (High censorship level), чтобы получить VPN с обфускацией (маскировкой) траффика с помощью Cloak. Предназначено для случаев когда Вы не хотите, чтобы ваш траффик определялся как общение с VPN. Будет установлен контейнер с OpenVPN, ShadowSocks и Cloak.</li>
+                    </ul>
+                </p>
+              </div>
+              <div class="images_app-provider" style="background: none;">
+                <img src="./screens/step3-select-wizard.png" alt=""/><br>
+                <img src="./screens/step3-choose-level.png" alt="">
+              </div>
+          </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Шаг 4. Установка</h2>
+                <div class="text text-step">
+                    <p>
+                        Для текущего примера остановимся на среднем уровне (Medium censorship level) и нажмем Далее (Next). Перед нами откроется несколько более подробное описание выбранной конфигурации. Нам необходимо нажать "Далее" (Next)
+                    </p>
+                    <p>
+                        На следующем этапе AmneziaVPN предложит зараннее включить режим "Только для выбранных сайтов". Ставьте галочку на свое усмотрение - в дальнейшем переключатель режимов (весь траффик / выбранные сайты через VPN / выбранные сайты без VPN) будет на главном экране. Далее нажимаем "Начать настройку" (Start configuring)
+                    </p>
+                    <p>
+                        Далее вы увидите экран с полосой прогресса - здесь Вам осталось дождаться окончания процесса. Чаще всего процесс занимает в районе 5 минут, после чего Вас встретит главное окно AmneziaVPN
+                    </p>
+                </div>
+                <div class="images_app-provider" style="background: none;">
+                  <img src="./screens/step4-medium-level.png" alt=""><br>
+                  <img src="./screens/step4-selectedsites-mode-suggested.png" alt=""><br>
+                  <img src="./screens/step4-configuring.png" alt=""><br>
+                  <img src="./screens/step4-installed.png" alt="">
+                </div>
+            </div>
+          </div>
+
+        <div class="block block-success">Готово!</div>
+
+        <div class="block block-footer">
+            <div class="block-footer-inner">
+                <img src="/img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
+                <div class="download download-footer">
+                    <a class="btn btn-footer" id="main-link-footer" href="#">Скачать приложение</a>
+                    <div class="text text-small text-footer">
+                        <span class="text-os" id="link-footer">Для Windows. Полностью бесплатно.</span>
+                    </div>
+                </div>
+                <div class="text text-footer"><img src="/img/github.svg" class="img-github" width="20" height="20"/>
+                    <a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Исходный код на Github</a>
+                </div>
+                <img src="/img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
+            </div>
+        </div>
+    </section>
+    <script src="/fotorama-to-guides.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</body>
+
+</html>

@@ -600,18 +600,19 @@ h3 {
 
   .block-personal_vpn-inner,
   .block-top-inner {
-    width: 645px;
+    width: 780px;
     margin-left: 30px;
   }
 
   .block-top {
-
-
     padding-bottom: 220px;
   }
 
-  .block-step-1,
-  .block-step-2 {
+  .block-top-guide {
+    padding-bottom: 30px;
+  }
+
+  .block-guide-step {
     width: 870px;
     padding-top: 70px;
     padding-bottom: 0;
@@ -803,6 +804,7 @@ h3 {
 
   .text-instruction {
     width: 210px;
+    padding: 10px;
   }
 
   .header-how-work {
@@ -979,4 +981,16 @@ h3 {
   .lang_block {
     right: 0;
   }
+}
+
+/* Appended for site content update */
+
+.guides-body{
+  padding: 30px;
+}
+
+.guide-item{
+  padding: 15px 10px;
+  font-weight: 900;
+  font-size: 20px;
 }
