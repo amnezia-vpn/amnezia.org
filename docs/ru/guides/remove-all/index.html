@@ -41,7 +41,7 @@
                         <a href="/index.html" class="href href-logo">
                             <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
                         </a>
-                        <h2 class="header header-block-top">Как поменять DNS сервер?</h2>
+                        <h2 class="header header-block-top">Удаление AmneziaVPN с сервера</h2>
                     </div>
                     <div class="lang_block">
                         <div class="lang_title"><span>Русский</span><span>Ru</span>
@@ -78,27 +78,60 @@
 
         <div class="block block-guide-step">
           <div class="step-2-inner">
-              <h2 class="header header-step">Шаг 2. Откройте настройки сети</h2>
+              <h2 class="header header-step">Шаг 2. Откройте настройки сервера</h2>
               <div class="text text-step">
-                Для этого нажмите на "Network settings"
+                Для этого нажмите на "Server settings"
               </div>
               <div class="images_app-provider" style="background: none;">
-                <img src="./screens/step2-open-network.png" alt=""/>
-                &nbsp;&nbsp;&nbsp;
-                <img style="width: 300px;" src="./screens/step2-dns-fields.png" alt=""/>
+                <img src="./screens/step1-settings-menu.png" alt=""/><br>
+                <img style="width: 300px;" src="./screens/step2-server-settings.png" alt=""/>
               </div>
           </div>
         </div>
 
         <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Шаг 3. Удаление</h2>
+                <div class="text text-step">
+                    <p>Нажимаем на "Очистить сервер от ПО Amnezia" (Clean server from Amnezia software) - на время удаления у Вас посереют (станут неактивными) все кнопки.</p>
+                    <p>После завершения процесса все кнопки снова станут активными, а внизу появится надпись "Сервер Амнезии успешно удален" (Amnezia server successfully uninstalled). Далее Вы можете пойти и <!-- TODO сделать ссылку на инструкцию по ручной установке --> поставить вручную, нажав кнопку "Протоколы и Сервисы" (Protocols and Services), либо забыть сервер в клиенте AmneziaVPN, нажав на кнопку "Забыть этот сервер" (Forget this server)</p>
+                    <p>Примечание: чуть позднее здесь появится продолжение, в котором будет описано как убедиться что с сервера все удалено, и как все удалить самому, если вдруг что-то пошло не так</p>
+                </div>
+                <div class="images_app-provider" style="background: none;">
+                  <img style="width: 300px;" src="./screens/step2-server-settings.png" alt=""/><br>
+                  <img src="./screens/step3-uninstalling.png" alt=""><br>
+                  <img src="./screens/step3-uninstalled.png" alt="">
+                </div>
+            </div>
+          </div>
+
+        <!-- TODO Дальнейшие этапы требуют скринов из терминала
+          <div class="block block-guide-step">
           <div class="step-2-inner">
-              <h2 class="header header-step">Шаг 3. Укажите нужный DNS сервер</h2>
+              <h2 class="header header-step">Шаг 4. Убеждаемся что все удалено</h2>
               <div class="text text-step">
-                <p>Необходимо указать только IP-адрес - запросы идут <u>через ваш VPN туннель</u> по стандартному DNS протоколу.</p>
-                <p><b>Замечание:</b> если в браузере Вы указали использование DNS-over-HTTPS, то DNS запросы из этого браузера в итоге пойдут именно на указанный там сервер, независимо от настроек DNS в AmneziaVPN! Это же касается и любых других приложений, которые делают DNS запросы через нестандартные протоколы (DNS-over-HTTPS, DNS-over-TLS, DNSCrypt, DNSSEC и т.д.), поэтому рекомендуется проверить настройки своих браузеров и прочих приложений.</p>
+                <p>Первым делом заходим на VPS через любой SSH-клиент</p>
+                <p>
+                    Если заходим как <b>root</b> или как -->
+                    <!-- TODO нужна ссылка на инструкцию по настройке пользователя для амнезии -->
+                     <!-- <b>пользователь настроенный для AmneziaVPN</b>, то используем команды:
+                    <ul>
+                        <li>- <i>docker ps -a</i></li>
+                        <li>- <i>docker images</i></li>
+                    </ul>
+                </p>
+                <p>
+                    Если используется какой-то другой пользователь, то перед каждой командой добавляется <b>sudo</b>, чтобы получались:
+                    <ul>
+                        <li>- <i>sudo docker ps -a</i></li>
+                        <li>- <i>sudo docker images</i></li>
+                    </ul>
+                </p>
+                <p>Первая команда отобразит нам список всех контейнеров, которые когда-либо запускались на сервере. Если среди них найдется любой, содержащий в названии "amnezia", значит что-то пошло не так. В этом случае необходимо будет удалить контейнер вручную.</p>
+                <p>Вторая команда отобразит список всех образов для контейнеров. Если говорить упрощенно, то это как установочные файлы для программ. Если отобразилось хоть что-то, содержащее в названии "amnezia", значит тут тоже что-то пошло не так и надо произвести удаление вручную</p>
               </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="block block-success">Готово!</div>
 
