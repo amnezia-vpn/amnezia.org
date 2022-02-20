@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Amnezia. Ваш персональный приватный VPN</title>
+    <title>Смена DNS | Amnezia. Ваш персональный приватный VPN</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
@@ -69,8 +69,7 @@
                   Для этого нажмите на шестеренку в правом верхнем углу основного окна программы
                 </div>
                 <div class="images_app-provider" style="background: none;">
-                  <img src="./screens/step1-open-app.png" alt=""/>
-                  &nbsp;&nbsp;&nbsp;
+                  <img src="./screens/step1-open-app.png" alt=""/><br>
                   <img src="./screens/step1-settings-menu.png" alt=""/>
                 </div>
             </div>
@@ -80,11 +79,10 @@
           <div class="step-2-inner">
               <h2 class="header header-step">Шаг 2. Откройте настройки сети</h2>
               <div class="text text-step">
-                Для этого нажмите на "Network settings"
+                Для этого нажмите на "Настройки сети" (Network settings)
               </div>
               <div class="images_app-provider" style="background: none;">
-                <img src="./screens/step2-open-network.png" alt=""/>
-                &nbsp;&nbsp;&nbsp;
+                <img src="./screens/step2-open-network.png" alt=""/><br>
                 <img style="width: 300px;" src="./screens/step2-dns-fields.png" alt=""/>
               </div>
           </div>
@@ -94,8 +92,15 @@
           <div class="step-2-inner">
               <h2 class="header header-step">Шаг 3. Укажите нужный DNS сервер</h2>
               <div class="text text-step">
-                <p>Необходимо указать только IP-адрес - запросы идут <u>через ваш VPN туннель</u> по стандартному DNS протоколу.</p>
-                <p><b>Замечание:</b> если в браузере Вы указали использование DNS-over-HTTPS, то DNS запросы из этого браузера в итоге пойдут именно на указанный там сервер, независимо от настроек DNS в AmneziaVPN! Это же касается и любых других приложений, которые делают DNS запросы через нестандартные протоколы (DNS-over-HTTPS, DNS-over-TLS, DNSCrypt, DNSSEC и т.д.), поэтому рекомендуется проверить настройки своих браузеров и прочих приложений.</p>
+                <p>
+                    Необходимо указать только IP-адреса - запросы идут <u>через ваш VPN туннель</u> по стандартному DNS протоколу.
+                </p>
+                <p>
+                    Начиная с версии 2.0.8.2 в AmneziaVPN изменена реализация контейнера с DNS сервером - он теперь только для внутреннего использования (не будет доступен извне). Использоваться он будет только если его (DNS контейнер) установить вручную и поставить галочку в настройках сети (она уже стоит по умолчанию).
+                </p>
+                <p>
+                    <b>Замечание:</b> если в браузере Вы указали использование DNS-over-HTTPS, то DNS запросы из этого браузера в итоге пойдут именно на указанный там сервер, независимо от настроек DNS в AmneziaVPN! Это же касается и любых других приложений, которые делают DNS запросы через нестандартные протоколы (DNS-over-HTTPS, DNS-over-TLS, DNSCrypt, DNSSEC и т.д.), поэтому рекомендуется проверить настройки своих браузеров и прочих приложений.
+                </p>
               </div>
           </div>
         </div>

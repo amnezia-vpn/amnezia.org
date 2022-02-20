@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Автоматическая установка | Amnezia. Ваш персональный приватный VPN</title>
+    <title>Ручная установка | Amnezia. Ваш персональный приватный VPN</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
@@ -41,7 +41,7 @@
                         <a href="/index.html" class="href href-logo">
                             <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
                         </a>
-                        <h2 class="header header-block-top">Инструкция по автоматической установке</h2>
+                        <h2 class="header header-block-top">Инструкция по ручной установке</h2>
                     </div>
                     <div class="lang_block">
                         <div class="lang_title"><span>Русский</span><span>Ru</span>
@@ -94,20 +94,19 @@
 
         <div class="block block-guide-step">
           <div class="step-2-inner">
-              <h2 class="header header-step">Шаг 3. Выбор конфигурации</h2>
+              <h2 class="header header-step">Шаг 3. Выбор ручной конфигурации</h2>
               <div class="text text-step">
-                <p>На данном этапе первое что Вы увидите - вопрос о том, что хотите использовать: ручную установку или автоматическую. Данная инструкция подразумевает автоматическую установку, поэтому ее и выбираем, нажав на "Запустить мастер установки" (Run Setup Wizard).</p>
-                <p>Чтобы выбрать какую-либо конфигурацию, AmneziaVPN задает Вам вопрос - какой уровень цензуры Вас беспокоит?
-                    <ul>
-                        <li>Выберите "Низкий уровень цензуры" (Low censorship level), чтобы просто получить VPN для шифрования траффика (классический VPN). В данном случае на сервер будет установлен контейнер с OpenVPN.</li>
-                        <li>Выберите "Средний уровень цензуры" (Medium censorship level), чтобы получить сравнительно гибкое решение на случай, когда блокируются сайты, но не VPN. В данном случае на сервер будет установлен контейнер с OpenVPN и ShadowSocks.</li>
-                        <li>Выберите "Высокий уровень цензуры" (High censorship level), чтобы получить VPN с обфускацией (маскировкой) траффика с помощью Cloak. Предназначено для случаев когда Вы не хотите, чтобы ваш траффик определялся как общение с VPN. Будет установлен контейнер с OpenVPN, ShadowSocks и Cloak.</li>
-                    </ul>
+                <p>
+                    На данном этапе первое что Вы увидите - вопрос о том, что хотите использовать: ручную установку или автоматическую. Данная инструкция подразумевает ручную установку, поэтому ее и выбираем, нажав на "Настроить VPN протоколы вручную" (Configure VPN protocols manually).
+                </p>
+                <p>
+                    Перед Вами появится окно с одной кнопкой - "Выбрать контейнер протокола" (Select protocol container), по нажатию которой у вас отобразятся все доступные к установке контейнеры.
                 </p>
               </div>
               <div class="images_app-provider" style="background: none;">
                 <img src="./screens/step3-select-wizard.png" alt=""/><br>
-                <img src="./screens/step3-choose-level.png" alt="">
+                <img src="./screens/step3-select-protocols.png" alt=""><br>
+                <img src="./screens/step3-containers-list.png" alt="">
               </div>
           </div>
         </div>
@@ -117,18 +116,21 @@
                 <h2 class="header header-step">Шаг 4. Установка</h2>
                 <div class="text text-step">
                     <p>
-                        Для текущего примера остановимся на среднем уровне (Medium censorship level) и нажмем Далее (Next). Перед нами откроется несколько более подробное описание выбранной конфигурации. Нам необходимо нажать "Далее" (Next)
+                        Для текущего примера остановимся на "OpenVPN over ShadowSocks" - этот контейнер соответствует опции "Средний уровень цензуры" (Medium censorship level) в режиме автоматической настройки.
+                        <!-- TODO Добавить сюда ссылку на страницу о разнице между контейнерами, когда таковая будет готова. -->
                     </p>
                     <p>
-                        На следующем этапе AmneziaVPN предложит зараннее включить режим "Только для выбранных сайтов". Ставьте галочку на свое усмотрение - в дальнейшем переключатель режимов (весь траффик / выбранные сайты через VPN / выбранные сайты без VPN) будет на главном экране. Далее нажимаем "Начать настройку" (Start configuring)
+                        После выбора нужного контейнера, перед Вами будет представлена пара опций, а именно используемый порт и возможность выбора TCP/UDP протокола - в том случае, если принимающая траффик часть поддерживает такую возможность. <br>
+                        Так, например, OpenVPN может работать как через TCP, так и через UDP. WireGuard работает только через UDP. А в случае OpenVPN over ShadowSocks принимать Ваш траффик будет именно ShadowSocks, который работает только через TCP протокол, поэтому в его случае выбор так же не предусмотрен.
                     </p>
                     <p>
+                        Выбрав порт для контейнера, нажимаем на "Настроить сервер" (Setup server) <br>
                         Далее Вы увидите экран с полосой прогресса - здесь Вам осталось дождаться окончания процесса. Чаще всего процесс занимает в районе 5 минут, после чего Вас встретит главное окно AmneziaVPN
                     </p>
                 </div>
                 <div class="images_app-provider" style="background: none;">
-                  <img src="./screens/step4-medium-level.png" alt=""><br>
-                  <img src="./screens/step4-selectedsites-mode-suggested.png" alt=""><br>
+                  <img src="./screens/step4-select-ovpn-ss.png" alt=""><br>
+                  <img src="./screens/step4-opvn-ss-settings.png" alt=""><br>
                   <img src="./screens/step4-configuring.png" alt=""><br>
                   <img src="./screens/step4-installed.png" alt="">
                 </div>
@@ -139,17 +141,7 @@
             <div class="step-2-inner">
                 <h2 class="header header-step">Шаг 4.1. Примечание</h2>
                 <div class="text text-step">
-                    <p>
-                        Если вдруг AmneziaVPN не может подключиться к настроенному серверу, необходимо убедиться в том, что Вам доступен для использования порт выбранного контейнера (уровня цензуры), а так же что этот порт открыт. На обычных хостингах зачастую к Вашему VPS доступ идет напрямую, поэтому все будет работать "из коробки". У более крупных провайдеров (Oracle Cloud, Amazon Web Services, Microsoft Azure, Google Cloud Platform и другие) сервера находятся за NAT и/или файрволами, поэтому в панели управления необходимо будет найти настройки сети и открыть выбранный порт для Вашего VPS.
-                    </p>
-                    <p>
-                        Список портов по уровням:
-                        <ul>
-                            <li>Низкий уровень цензуры (Low censorship level) использует порт <u>UDP 1194</u> </li>
-                            <li>Средний уровень цензуры (Medium censorship level) использует порт <u>TCP 6789</u> </li>
-                            <li>Высокий уровень цензуры (High censorship level) использует порт <u>TCP 443</u> </li>
-                        </ul>
-                    </p>
+                    Если вдруг AmneziaVPN не может подключиться к настроенному серверу, необходимо убедиться в том, что Вам доступен для использования выбранный порт (указанный при настройке сервера), а так же что этот порт открыт. На обычных хостингах зачастую к Вашему VPS доступ идет напрямую, поэтому настроенный порт будет работать "из коробки". У более крупных провайдеров (Oracle Cloud, Amazon Web Services, Microsoft Azure, Google Cloud Platform и другие) сервера находятся за NAT и/или файрволами, поэтому в панели управления необходимо будет найти настройки сети и открыть выбранный порт для Вашего VPS.
                 </div>
             </div>
           </div>
