@@ -84,8 +84,8 @@ let hList = [
 
 $(document).ready(function () {
 
-    let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1_x64.exe';
-    let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/1.8/AmneziaVPN_1.8.1.dmg';
+    let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.0.8/AmneziaVPN_2.0.8.3_x64.exe';
+    let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.0.8/AmneziaVPN_2.0.8.dmg';
     let deviceWin = true;
     let iPhone = /iPhone/g;
     let iPad = /iPad/g;
