@@ -42,7 +42,7 @@ let hList = [
     },
     {
         name: 'Inferno Solutions',
-        url: 'https://cp.inferno.name/cart.php?gid=56',
+        url: 'https://cp.inferno.name/aff.php?aff=3451&gid=56',
         legalAddress: 'Великобритания',
         price: 'от $5,00/мес (первый месяц скидка по промокоду Amnezia)',
         lang: 'Сайт на русском языке',
