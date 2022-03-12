@@ -68,7 +68,7 @@ let hList = [
     },
     {
         name: 'DigitalOcean',
-        url: 'https://www.digitalocean.com',
+        url: 'https://www.digitalocean.com/?refcode=3d6dcd68b697&utm_campaign=Referral_Invite&utm_medium=Referral_Program',
         legalAddress: 'США',
         price: 'от $5,00/мес',
         lang: 'Сайт на английском языке',

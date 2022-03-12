@@ -15,7 +15,7 @@ let hList = [
     },
     {
         name: 'DigitalOcean',
-        url: 'https://www.digitalocean.com',
+        url: 'https://www.digitalocean.com/?refcode=3d6dcd68b697&utm_campaign=Referral_Invite&utm_medium=Referral_Program',
         legalAddress: 'USA',
         price: 'from $5.00/month',
         locations: `New York, San Francisco, Amsterdam, Frankfurt, London, Toronto, Singapore, Bangalore`,
