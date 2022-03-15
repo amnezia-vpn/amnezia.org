@@ -1,20 +1,20 @@
 //-------------------- HOSTING LIST
 
 let hList = [
-    {
-        name: 'robovps.biz',
-        url: 'https://www.robovps.biz/?ref=24892',
-        legalAddress: 'Россия',
-        price: 'от $2,02/мес',
-        lang: 'Сайт на русском языке',
-        locations: 'Германия, Россия',
-        payment: `Системы быстрых платежей, Webmoney WMP, Робокасса, ЮMoney,РБК мани, Paypal-RUB, Paypal-USD, Paypal-EURO, 
-            Paysera, Tinkoff, Халва, В салонах Евросеть, В салонах Связной, Альфабанк, Русский стандарт, Промсвязьбанк, 
-            безналичный расчет, Сбербанк онлайн, WeChat, CoinPayment`,
-        imgFolderName: 'Robovps',
-        imgStep1Count: '16',
-        imgStep2Count: '3',
-    },
+//     {
+//         name: 'robovps.biz',
+//         url: 'https://www.robovps.biz/?ref=24892',
+//         legalAddress: 'Россия',
+//         price: 'от $2,02/мес',
+//         lang: 'Сайт на русском языке',
+//         locations: 'Германия, Россия',
+//         payment: `Системы быстрых платежей, Webmoney WMP, Робокасса, ЮMoney,РБК мани, Paypal-RUB, Paypal-USD, Paypal-EURO, 
+//             Paysera, Tinkoff, Халва, В салонах Евросеть, В салонах Связной, Альфабанк, Русский стандарт, Промсвязьбанк, 
+//             безналичный расчет, Сбербанк онлайн, WeChat, CoinPayment`,
+//         imgFolderName: 'Robovps',
+//         imgStep1Count: '16',
+//         imgStep2Count: '3',
+//     },
     {
         name: 'cinfu.com',
         url: 'https://panel.cinfu.com/aff.php?aff=1395',
