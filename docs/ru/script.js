@@ -83,25 +83,25 @@ let hList = [
 
 $(document).ready(function () {
 
-    let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe';
-    let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.1.2/AmneziaVPN_2.1.2.dmg';
-    let deviceWin = true;
-    let iPhone = /iPhone/g;
-    let iPad = /iPad/g;
-    if (iPhone.test(navigator.userAgent) || iPad.test(navigator.userAgent) || navigator.platform.indexOf('Win') < 0) deviceWin = false;
+    //let linkWin = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.1.2/AmneziaVPN_2.1.2_x64.exe';
+    //let linkMac = 'https://github.com/amnezia-vpn/desktop-client/releases/download/2.1.2/AmneziaVPN_2.1.2.dmg';
+    //let deviceWin = true;
+    //let iPhone = /iPhone/g;
+    //let iPad = /iPad/g;
+    //if (iPhone.test(navigator.userAgent) || iPad.test(navigator.userAgent) || navigator.platform.indexOf('Win') < 0) deviceWin = false;
 
     // -------------------- FOR BOTH PAGES
 
-    $('#link-footer').html(deviceWin ? 'Для Windows. Полностью бесплатно.' : 'Для Mac. Полностью бесплатно.');
-    $('#main-link-footer').attr('href', deviceWin ? linkWin : linkMac);
+    //$('#link-footer').html(deviceWin ? 'Для Windows. Полностью бесплатно.' : 'Для Mac. Полностью бесплатно.');
+    //$('#main-link-footer').attr('href', deviceWin ? linkWin : linkMac);
 
     // -------------------- FOR MAIN PAGE
 
-    $('#main-link').attr('href', deviceWin ? linkWin : linkMac);
-    $('#btn-personal').attr('src', deviceWin ? "img/windows_fff.svg" : "img/mac_fff.svg");
-    $('#link-img-personal').attr('src', deviceWin ? "img/mac.svg" : "img/windows.svg");
-    $('#link-personal').html(deviceWin ? 'Скачать версию для Mac' : 'Скачать версию для Windows');
-    $('#link-personal').attr('href', deviceWin ? linkMac : linkWin);
+    //$('#main-link').attr('href', deviceWin ? linkWin : linkMac);
+    //$('#btn-personal').attr('src', deviceWin ? "img/windows_fff.svg" : "img/mac_fff.svg");
+    //$('#link-img-personal').attr('src', deviceWin ? "img/mac.svg" : "img/windows.svg");
+    //$('#link-personal').html(deviceWin ? 'Скачать версию для Mac' : 'Скачать версию для Windows');
+    //$('#link-personal').attr('href', deviceWin ? linkMac : linkWin);
 
     // -------------------- HOSTING INSTRUCTIONS GENERATION
 
