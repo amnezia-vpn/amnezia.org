@@ -54,7 +54,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #15CDCB;
+  color: #74b0d8; /* #15CDCB */
   font-weight: 600;
 }
 
@@ -78,13 +78,15 @@ h2 {
 
 .about {
   width: 100%;
-  padding: 0;
+  /*padding: 0;*/
   margin: 0;
 }
 
 .block {
-  padding: 30px;
-  padding-bottom: 90px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 1px; /* fix background bug on small screen */
+  padding-bottom: 0px; /* 90 */
   position: relative;
 }
 
@@ -94,7 +96,7 @@ h2 {
 
 .href-logo {
   margin: 30px 0;
-  margin-bottom: 80px;
+  margin-bottom: 50px; /* 80px */
   display: block;
 }
 
@@ -104,7 +106,7 @@ h2 {
 
 .logo-graduate {
   width: 107px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .logo-personal {
@@ -186,6 +188,7 @@ h2 {
 
 .download>.text-personal {
   padding-top: 2px;
+  text-align: center;
 }
 
 .download-footer {
@@ -193,7 +196,7 @@ h2 {
 }
 
 .text-small {
-  display: flex;
+  /*display: flex;*/
   justify-content: flex-start;
   align-items: baseline;
   margin-top: 10px;
@@ -258,7 +261,7 @@ h2 {
 .block-how-work {
   background-color: #150D59;
   padding-bottom: 30px;
-  margin-top: 140px;
+  margin-top: 50px; /* 140px */
 }
 
 .block__content:last-child .content-about {
@@ -271,8 +274,8 @@ h2 {
     url('img/bg_mob.png') no-repeat right top;
   background-size: cover;
   color: #DDDDDD;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 50px; /* 140px */
+  padding-bottom: 20px; /* 140px */
 }
 
 
@@ -334,7 +337,7 @@ h2 {
 }
 
 .block-information {
-  padding-top: 140px;
+  padding-top: 0px; /* 140px */
   padding-bottom: 20px;
 }
 
@@ -345,8 +348,8 @@ h2 {
 
 .block-footer {
   background-color: #100A44;
-  padding-top: 196px;
-  padding-bottom: 60px;
+  padding-top: 50px; /* 196px */
+  padding-bottom: 0px; /* 60px */
 }
 
 .block-footer-inner {
@@ -468,7 +471,7 @@ h2 {
 }
 
 .text-step {
-  margin-bottom: 80px;
+  margin-bottom: 50px; /* 80px */
 }
 
 h3 {
@@ -500,7 +503,7 @@ h3 {
 }
 
 .server {
-  margin-bottom: 80px;
+  margin-top: 50px; /* margin-bottom: 80px; */
 }
 
 .block-success {
@@ -515,9 +518,14 @@ h3 {
   color: #EBEAF6;
 }
 
-.block-step-1 {
-  padding-bottom: 0;
-}
+.block-step-1,
+.block-step-2 {
+    width: 870px;
+    padding-top: 70px;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .fotorama {
   margin-top: 30px;
@@ -544,13 +552,13 @@ h3 {
   }
 
   .href-logo {
-    margin-bottom: 120px;
-    margin-top: 35px;
+    margin-bottom: 70px; /* 120 */
+    /* margin-top: 0px; */ /* 35 */
   }
 
-  .instruction .href-logo {
+  /*.instruction .href-logo {
     margin-bottom: 194px;
-  }
+  }*/
 
   .about {
     /* background: url('img/bg_top_desc.png') no-repeat center top; */
@@ -568,7 +576,7 @@ h3 {
   }
 
   .block {
-    padding-bottom: 120px;
+    padding-bottom: 0px; /* 120px */
   }
 
   .block-about,
@@ -600,12 +608,13 @@ h3 {
 
   .block-personal_vpn-inner,
   .block-top-inner {
-    width: 780px;
+    width: 780px; /* in old version css - 645px */
     margin-left: 30px;
   }
 
   .block-top {
-    padding-bottom: 220px;
+    padding-bottom: 0px; /* in old version css - 220px */
+    height: auto; /* in old version css - 450px */
   }
 
   .block-top-guide {
@@ -614,8 +623,9 @@ h3 {
 
   .block-guide-step {
     width: 870px;
-    padding-top: 70px;
+    padding-top: 10px; /* in old version css - 70px */
     padding-bottom: 0;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -662,13 +672,10 @@ h3 {
   }
 
   .block-how-work_wrapper {
-    padding: 130px 90px;
+    padding: 30px 90px; /* 130px 90px */
     background-color: #150D59;
     border-radius: 20px;
-
   }
-
-
 
   .block-how-work_inner .block__content {
     display: flex;
@@ -724,8 +731,8 @@ h3 {
   }
 
   .block-footer {
-    padding-top: 190px;
-    padding-bottom: 60px;
+    padding-top: 50px; /* 190px */
+    padding-bottom: 0px; /* 60px */
   }
 
   .block-provider {
@@ -734,8 +741,8 @@ h3 {
   }
 
   .block-information {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding-top: 70px; /* 200px */
+    padding-bottom: 80px; /* 100px */
   }
 
   .block-technical {
@@ -746,10 +753,6 @@ h3 {
 
   .block-server .text {
     padding-bottom: 20px;
-  }
-
-  .block-top {
-    height: 450px;
   }
 
   .images_app-server,
@@ -994,3 +997,90 @@ h3 {
   font-weight: 900;
   font-size: 20px;
 }
+
+/* 2022.10.18 new icons in footer */
+.footer-logo {
+  width: 67px;
+  height: 67px;
+  padding: 10px;
+}
+
+/* 2022.10.19 faq styles */
+.faq-list li{
+  list-style-type: none;
+}
+
+.faq_item {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.5); }
+
+.faq_content {
+  padding-top: 2.2rem; }
+  .faq_content p + p {
+    margin-top: 2rem; }
+
+.faq_title_w {
+  position: relative;
+  width: 100%;
+  cursor: pointer; }
+  
+.faq_title_w h3{
+  padding-right: 50px;
+  font-weight: 0;
+}
+
+.faq_title_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid #EBEAF6; }
+  @media screen and (max-width: 767px) {
+    .faq_title_btn {
+      width: 2rem;
+      height: 2rem;
+      border: 2px solid #EBEAF6; } }
+  .faq_title_btn::after, .faq_title_btn::before {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -1px;
+    margin-right: -.8rem;
+    width: 1.6rem;
+    height: 2px;
+    content: '';
+    background: #EBEAF6;
+    border-radius: 1rem; }
+    @media screen and (max-width: 767px) {
+      .faq_title_btn::after, .faq_title_btn::before {
+        width: 1rem;
+        margin-right: -.5rem; } }
+  .faq_title_btn::before {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+    .faq_item.active_mod .faq_title_btn::before {
+      -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+              transform: rotate(0); }
+
+.faq_img_block {
+  padding-top: 3rem;
+  margin-bottom: -3rem; }
+  .faq_img_block img {
+    display: block;
+    max-height: 30rem;
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto 3rem;
+    -o-object-fit: contain;
+       object-fit: contain; }
+
+.faq_content {
+  font-size: 1.8rem;
+  line-height: 1.4; }
+  @media screen and (max-width: 767px) {
+    .faq_content {
+      font-size: 1.6rem; } }
