@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" prefix="og: http://ogp.me/ns#">
+<html lang="ru" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
 
 <head>
 	<title>Часто задаваемые вопросы (FAQ) | Amnezia. Ваш персональный приватный VPN</title>
@@ -57,7 +57,7 @@
                         </div>
                         <ul class="lang_list">
                             <li class="lang_item">
-                                <a href="https://en.amnezia.org/instruction.html" class="lang_link">
+                                <a href="https://en.amnezia.org/faq.html" class="lang_link">
                                     <span>English</span>
                                     <span>En</span>
                                 </a>
@@ -76,29 +76,201 @@
               <ul class="faq-list">
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3>Можно ли доверять AmneziaVPN?</h3>
+                    <h3>Amnezia это VPN?</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>Да. <a href="https://github.com/amnezia-vpn/desktop-client" target="_blank">AmneziaVPN</a> является проектом с открытым исходным кодом и разворачивает на сервере приложения <a href="https://github.com/OpenVPN/" target="_blank">OpenVPN</a>, <a href="https://github.com/shadowsocks" target="_blank">ShadowSocks</a>, <a href="https://www.wireguard.com/repositories/" target="_blank">WireGuard</a> и/или <a href="https://github.com/cbeuw/Cloak" target="_blank">Cloak</a> по желанию пользователя. У пользователя есть возможность как оперативно развернуть, так и полностью удалить любой из установленных на сервер VPN сервисов, а также полностью очистить сервер от всех установленных Амнезией сервисов всего в один клик. Вопрос в другом - доверяете ли Вы серверу, который собираетесь использовать? ;)</p>
+                    <p>Нет! Amnezia это не VPN, это программное обеспечение с помощью которого вы
+                      сможете настроить и пользоваться своим собственным VPN.</p>
                   </div>
                 </li>
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3>Как именно происходит установка?</h3>
+                    <h3>Амнезия бесплатная?</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>На ваш VPS будет установлен <a href="https://www.docker.com/" target="_blank">Docker</a>. С его помощью будет собран контейнер, в котором и будет произведена установка выбранной базы (<a href="https://github.com/amnezia-vpn/desktop-client/tree/master/client/server_scripts" target="_blank">OpenVPN  и т.д.</a>). Благодаря этому AmneziaVPN легко обновляет всю необходимую начинку на сервере и позволяет без проблем изменить конфигурацию вашего VPN. Также, данный способ позволяет не "засорять" хостовую систему вашего сервера.</p>
+                    <p>Да! Amnezia абсолютно бесплатное ПО. Вы не подключаетесь к нашим серверам
+                      и не платите нам ничего.
+                      Однако для создания собственного VPN вам нужно будет приобрести любой VPS любого провайдера, или использовать уже имеющийся.</p>
                   </div>
                 </li>
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3>Почему требуется сервер с KVM?</h3>
+                    <h3>На каких устройствах с какими операционными системами работает Amnezia?</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>AmneziaVPN использует Docker для изолированного развертывания вашего VPN сервера. Не с каждым типом виртуализации возможно использование Docker, однако KVM это точно позволяет. С другими типами виртуализации работа с Docker может оказаться невозможной как в силу ограничений определенного типа виртуализации, так и в силу конфигурации от поставщика VPS.</p>
+                    <p>На данный момент есть версия для Windows, MacOS, Android, iOS, и Linux.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Amnezia собирает данные пользователей?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Amnezia не собирает и не передаёт никакой статистики, логов, аналитики и другой информации о пользователях.
+                      Единственные данные которые запрашивает клиент - это данные подключения, которые также не собираются и не передаются,
+                      что можно проверить благодаря <a href="https://github.com/amnezia-vpn/">открытому исходному коду</a> серверной и клиентской части ПО.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Как работает Amnezia ?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Вы указываете IP-адрес, логин и пароль вашего сервера.
+                      Приложение подключается к серверу по SSH, устанавливает Docker и запускает серверные контейнеры Amnezia.
+                      Для каждого протокола подключения запускается отдельный контейнер, генерируются ключи и корневой сертификат.
+                      После того как сервер настроен, вы можете подключаться по VPN к этому серверу.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Почему Amnezia сложнее заблокировать чем другие VPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Чем крупнее и популярнее коммерческий VPN сервис, тем больше его вероятность попадания в поле зрения надзорных органов,
+                      а значит и выше вероятность блокировки доступа к его серверам и протоколам.
+                      С помощью Amnezia вы создаете на базе любого VPS собственный VPN только для вашего использования.
+                      При использовании собственного VPS в связке с зашифрованными VPN протоколами, вероятность блокировки существенно снижается.
+                      Это могут подтвердить наши пользователи из стран с высоким уровнем цензуры.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>
+                      В чем преимущества Amnezia и других Self-hosted VPN перед другими VPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">Полный контроль</span> - у вас полный контроль над вашим
+                      собственным сервером
+                            VPN,
+                      включая настройку, безопасность, логирование и доступ к данным.
+                      Вы имеете возможность выбирать конфигурацию, протоколы шифрования и настройки безопасности в соответствии с вашими требованиями.
+                    </p>
+                    <p>
+                      <span class="price">Высокая производительность</span> - Self-hosted VPN
+                      может предложить более высокую скорость и производительность, поскольку вы управляете ресурсами сервера и можете настроить его под свои потребности. Это особенно полезно, если у вас есть большое количество пользователей или вам нужна высокая пропускная способность.
+                    </p>
+                    <p>
+                      <span class="price">Обход ограничений</span> - многие сайты знают IP адреса популярных VPN серверов и вносят их в черный
+                      список, покупая отдельный VPS, ваш IP адрес используете только вы и люди с которыми вы поделились данными для подключения.
+                    </p>
+                    <p>
+                      <span class="price">Мобильность</span> - возможность использовать свой
+                      настроенный VPN не только с клиентом Amnezia,
+                      но и с другими Self-hosted приложениями, которые поддерживают выбранные VPN
+                      протоколы.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Я скачал приложение, что дальше?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>После скачивания приложения вам необходимо ввести данные VPS. Вы можете
+                      использовать уже имеющийся у вас VPS, или купить новый.
+                      В качестве примера <a href="https://ru.amnezia.org/instruction.html">здесь</a>
+                      приведены инструкции для покупки VPS на нескольких популярных хостингах.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Хочу купить VPS, какие опции выбрать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Amnezia работает с любыми серверами на KVM виртуализации с операционной системой Ubuntu
+                      (официально поддерживаемая версия — 20.04) и Debian 10.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Зачем мне сервер с KVM?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Amnezia использует Docker для изолированного развертывания вашего VPN сервера.
+                      Не с каждым типом виртуализации возможно использование Docker, однако KVM это точно позволяет.
+                      С другими типами виртуализации работа с Docker может оказаться невозможной как в силу ограничений определенного типа виртуализации,
+                      так и в силу конфигурации от поставщика VPS.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Какой VPN протокол выбрать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">ВАЖНО!</span> Если в вашей стране очень высокий уровень
+                        контроля, заблокирован доступ ко многим сайтам,
+                      не работают никакие коммерческие и бесплатные VPN и VPN протоколы,
+                      рекомендуем с первого подключения использовать <span class="price">OpenVPN
+                      over Cloak</span>,
+                      так как используя другие протоколы ваш личный VPN может быть заблокирован, и вам придется приобретать новый VPS.
+                    </p>
+                    <p>
+                      Для всех остальных пользователей оптимальным сочетанием скорости и уровнем
+                      шифрования будет <span class="price">WireGuard</span>
+                      Так же вы можете использовать немного более медленный, но наиболее
+                      изученный и проверенный временем
+                      протокол <span class="price">OpenVPN</span>. Можно использовать только его,
+                      или в связке с <span class="price">ShadowSocks</span> или <span
+                      class="price">Cloak</span>.
+                    </p>
+                    <p>
+                      <span class="price">ShadowSocks</span> практически не сократит скорость и добавит маскировку трафика под HTTPS трафик, но только между пользователем и прокси-соединением.
+                    </p>
+                    <p>
+                      <span class="price">Cloak</span> может сильно влиять на скорость трафика. Маскирует прокси-сервер и прокси-трафик под HTTPS трафик,
+                      при попытке перехвата перенаправляет злоумышленника на ложный веб-сайт, его сложно вычислить и заблокировать.
+                      Рекомендован к использованию в странах где не работают другие VPN.
+                    </p>
+                    <p>
+                      <span class="price">IKEv2</span> имеет отличную скорость трафика и
+                      скорость подключения, он идеально подойдет если для вас важно быстрое переключение между устройствами.
+                    </p>
+                    <p>
+                      Ваш выбор наилучшего варианта зависит только от ваших потребностей.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Что такое Kill Switch?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">Kill switch</span> — это функция экстренного разрыва интернет
+                        соединения, интегрированная в приложение.
+                      В случае непредвиденного разрыва вашего VPN соединения функция VPN <span
+                      class="price">kill switch</span> автоматически отключит вас от Интернета.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Хочу использовать VPN, но не для всех сайтов. Что можно сделать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      У Amnezia есть функция с помощью которой вы можете добавлять сайты-исключения в список,
+                      чтобы посещать их со своего IP адреса. Она доступна на главном экране при подключении.
+                    </p>
                   </div>
                 </li>
                 <li class="faq_item">
@@ -107,59 +279,21 @@
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>Можно, поддерживается авторизация как по паролю, так и по ключам. Поддерживаемые типы OpenSSH ключей: <b>RSA</b> <i>(2048, 3072, 4096)</i> и <b>ECDSA</b> <i>(nistp256)</i> </p>
-                  </div>
-                </li>
-                <li class="faq_item">
-                  <div class="faq_title_w">
-                    <h3>Как при авторизации по ключу AmneziaVPN установит все, не зная при этом пароля учетной записи?</h3>
-                    <div class="faq_title_btn"></div>
-                  </div>
-                  <div class="faq_content">
-                    <p>На текущий момент подразумевается что в учетке, указанной для логина на сервер, не будет запрашиваться пароль для операций с <b>sudo</b>
-                    <!-- TODO. Как сделать такую учетку можете посмотреть в [ССЫЛКА НА ИНСТРУКЦИЮ]--></p>
-                  </div>
-                </li>
-                <li class="faq_item">
-                  <div class="faq_title_w">
-                    <h3>Какие клиенты можно использовать на Windows, Linux, MacOS, Android, iOS?</h3>
-                    <div class="faq_title_btn"></div>
-                  </div>
-                  <div class="faq_content">
-                    <p>Можно использовать любые клиенты под вашу операционную систему. Amnezia может генерировать файлы конфигурации для WireGuard, Openvpn, Shadowsocks и т.д.</p>
-                  </div>
-                </li>
-                <li class="faq_item">
-                  <div class="faq_title_w">
-                    <h3>У меня случилась ошибка при использовании AmneziaVPN, что делать?</h3>
-                    <div class="faq_title_btn"></div>
-                  </div>
-                  <div class="faq_content">
-                    <p>Связаться с разработчиками (через <a href="mailto:support@amnezia.org">support@amnezia.org</a> или в <a href="https://t.me/amnezia_vpn" target="_blank">Telegram чате</a>) предоставив им логи работы программы. Достать логи можно по следующим путям: </p>
-                    <p>На Windows:
-                      <ul>
-                        <li>- C:\Users\%USERNAME%\AppData\Roaming\AmneziaVPN.ORG\AmneziaVPN\log</li>
-                        <li>- C:\ProgramData\AmneziaVPN\log</li>
-                      </ul>
-                    </p>
-                    <p>На MacOS:
-                      <ul>
-                        <li>- /$HOME/Library/Application\ Support/AmneziaVPN.ORG/AmneziaVPN/</li>
-                        <li>- /var/log/AmneziaVPN/AmneziaVPN-service.log</li>
-                      </ul>
-                    </p>
-                    <p>На Android: Здесь логи пока что не пишутся, но в будущем версия с логами обязательно появится!
+                    <p>
+                      Можно, поддерживается авторизация как по паролю, так и по ключам. Поддерживаемые типы OpenSSH ключей: RSA (2048, 3072, 4096) и ECDSA (nistp256)
                     </p>
                   </div>
                 </li>
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3>Зачем может понадобиться сменить DNS сервер в настройках и какой лучше выбрать?</h3>
+                    <h3>Могу я поделиться подключением с другими людьми?</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>По умолчанию AmneziaVPN использует <a href="https://1.1.1.1/dns/#setup-instructions" target="_blank">DNS сервера Cloudflare</a>. В сети есть множество других сервисов, которые помимо скорости и стабильности предоставляют дополнительный функционал: альтернативные протоколы для использования, блокировку рекламных и/или вредоносных доменов, "семейный режим", а некоторые сервисы могут поддерживать дополнительные доменные зоны. Помимо всего прочего, возможно, у Вас уже есть предпочитаемый DNS сервис, который Вы хотели бы поставить. А еще у AmneziaVPN есть DNS-контейнер, благодаря которому будут доступны <a href="https://sites.emercoin.com/" target="_blank">сайты из <i>emerDNS</i></a></p>
-                    <p>Инструкция по смене используемого DNS в AmneziaVPN: <a href="guides/change-dns/" target="_blank">Как поменять DNS сервер?</a> </p>
+                    <p>
+                      Да, вы можете делиться данными подключения со всеми кому доверяете, и
+                      использовать один VPS для неограниченного количества пользователей.
+                    </p>
                   </div>
                 </li>
                 <li class="faq_item">
@@ -168,7 +302,82 @@
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
-                    <p>По умолчанию AmneziaVPN кэширует данные (сертификаты и ключи) от настроенного VPN сервера для быстрого подключения напрямую к с серверу. Данная кнопка сбрасывает этот кэш, в результате будут сгенерированы новые сертификаты с ключами, которые посредством SSH подключения будут помещены на сервер и уже только потом произойдет подключение. Необходимо использовать при смене сервера (если установлено на нескольких VPS), при обновлении клиента или сервера. Может потребоваться при изменениях настроек контейнеров.</p>
+                    <p>
+                      По умолчанию Amnezia кэширует данные (сертификаты и ключи) от настроенного VPN сервера для быстрого подключения напрямую к серверу.
+                      Данная кнопка сбрасывает этот кэш, в результате будут сгенерированы новые сертификаты с ключами,
+                      которые посредством SSH подключения будут помещены на сервер и уже только потом произойдет подключение. Необходимо использовать при смене сервера (если установлено на нескольких VPS), при обновлении клиента или сервера. Может потребоваться при изменениях настроек контейнеров.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Хочу поменять DNS сервер. Как это сделать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <a href="https://ru.amnezia.org/guides/change-dns-v2/">Инструкция по смене DNS сервера.</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Amnezia выдаёт ошибку. Что делать?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Вы можете связаться с разработчиками через support@amnezia.org. К письму приложите логи работы программы.
+                    </p>
+                    <div>
+                      Логи можно найти:
+                    </div>
+                    <p><span class="price">На Windows:</span></p>
+                    <ul>
+                      <li>
+                        - C:\Users\%USERNAME%\AppData\Roaming\AmneziaVPN.ORG\AmneziaVPN\log
+                      </li>
+                      <li>
+                        - C:\ProgramData\AmneziaVPN\log
+                      </li>
+                    </ul>
+                    <p><span class="price">На MacOS:</span></p>
+                    <ul>
+                      <li>
+                        - /$HOME/Library/Application\ 	Support/AmneziaVPN.ORG/AmneziaVPN/
+                      </li>
+                      <li>
+                        - /var/log/AmneziaVPN/AmneziaVPN-service.log
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Могу ли я использовать свой новый VPN в других приложениях?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Да. Если вы хотя бы один раз подключились через Amnezia, значит Amnezia
+                      настроила для Вас VPN и вы можете подключаться к
+                      Вашему VPN через другие оригинальные приложения. Более подробную информацию
+                      <a href="https://ru.amnezia.org/guides/alt-clients/">смотрите здесь</a>.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Почему нельзя использовать VPS из публичных источников?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Данные подключения могли быть размещены в публичном доступе с целью
+                      перехвата вашего трафика и личных данных.
+                      Поэтому, для безопасного соединения советуем вам использовать VPS купленный
+                      у проверенного VPS провайдера.
+                    </p>
                   </div>
                 </li>
                 <!-- Predefined templates for FAQ <li class="faq_item">
@@ -237,6 +446,9 @@
 					<a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank"><img src="img/github.svg" class="footer-logo" width="67" height="67" alt="Source code on Github" /></a>
 					<a href="https://t.me/amnezia_vpn" target="_blank"><img src="img/telegram.svg" class="footer-logo" width="67" height="67" alt="Telegram: https://t.me/amnezia_vpn" /></a>
 					<a href="https://signal.group/#CjQKIB2gUf8QH_IXnOJMGQWMDjYz9cNfmRQipGWLFiIgc4MwEhAKBONrSiWHvoUFbbD0xwdh" target="_blank"><img src="img/signal.svg" class="footer-logo" width="67" height="67" alt="Signal: https://signal.group" /></a>
+          <a href="https://www.reddit.com/r/AmneziaVPN/" target="_blank"><img
+            src="img/reddit-logo.svg" class="footer-logo" width="67" height="67"
+            alt="Reddit: https://www.reddit.com/r/AmneziaVPN/" /></a>
 				</div>
 				
 				<a href="https://privacyaccelerator.org/" target="_blank">

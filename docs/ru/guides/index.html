@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
     <meta name="msapplication-config" content="/browserconfig.xml"/>
     <meta name="msapplication-TileColor" content="#100A44">
     <meta name="theme-color" content="#100A44">
@@ -38,20 +38,21 @@
             <div class="block block-top-guide">
                 <div class="section_in">
                     <div class="block-top-inner">
-                        <a href="/index.html" class="href href-logo">
-                            <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
+                        <a href="../index.html" class="href href-logo">
+                            <img src="../img/logo.svg" class="logo logo-personal" width="150" height="15"
+                                 alt="Amnezia"/>
                         </a>
-                        <h2 class="header header-block-top">Инструкции и статьи</h2>
+                        <h2 class="header header-block-top">Инструкции</h2>
                     </div>
                     <div class="lang_block">
                         <div class="lang_title"><span>Русский</span><span>Ru</span>
                             <div class="lang_arrow_w">
-                                <img src="/img/icons/angle-right.svg" alt="" class="lang_arrow">
+                                <img src="../img/icons/angle-right.svg" alt="" class="lang_arrow">
                             </div>
                         </div>
                         <ul class="lang_list">
                             <li class="lang_item">
-                                <a href="https://en.amnezia.org/instruction.html" class="lang_link">
+                                <a href="https://en.amnezia.org/guides/" class="lang_link">
                                     <span>English</span>
                                     <span>En</span>
                                 </a>
@@ -64,74 +65,85 @@
 
         <section class="guides-body">
             <div class="guide-item">
-                <a href="setup-wizard/" target="">
-                    1. Автоматическая настройка (через Setup Wizard)
+                <a href="setup-wizard-v2/" target="">
+                    Установка с помощью - Run Setup Wizard
                 </a>
             </div>
             <div class="guide-item">
-                <a href="setup-manual/" target="">
-                    2. Ручная настройка (с выбором контейнеров)
+                <a href="setup-manual-v2/" target="">
+                    Установка с помощью - Configure VPN protocols manually
                 </a>
             </div>
             <div class="guide-item">
-                <a href="reinstall-reconfigure/" target="">
-                    3. Переустановка или перенастройка контейнеров
+                <a href="connect-code-v2/" target="">
+                    Подключение через Сonnection code
                 </a>
             </div>
             <div class="guide-item">
-                <a href="remove-all/" target="">
-                    4. Удаление AmneziaVPN с сервера
+                <a href="connect-file-v2/" target="">
+                    Подключение через файл
                 </a>
             </div>
             <div class="guide-item">
-                <!-- <a href="" target=""> -->
-                    5. Разница между контейнерами - скоро появится
-                <!-- </a> -->
+                <a href="private-dns-v2/" target="">
+                    Установка сервера с собственным DNS
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="change-dns-v2/" target="">
+                    Смена DNS
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="protocols-table-v2/" target="">
+                    Поддерживаемые протоколы
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="logs-v2/" target="">
+                    Работа с логами
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="general-info-v2/" target="">
+                    Описание интерфейса приложения
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="delete-from-server-v2/" target="">
+                    Удаление AmneziaVPN с сервера
+                </a>
+            </div>
+            <div class="guide-item">
+                <a href="protocols-info-v2/" target="">
+                    Описание протоколов
+                </a>
             </div>
             <div class="guide-item">
                 <a href="alt-clients/" target="">
-                    6. Альтернативные клиенты
+                    Список альтернативных клиентов
                 </a>
-            </div>
-            <div class="guide-item">
-                <!-- <a href="" target=""> -->
-                    7. Создание пользователя для настройки - скоро появится
-                <!-- </a> -->
-            </div>
-            <div class="guide-item">
-                <!-- <a href="ssh-keys/" target=""> -->
-                    8. Работа с SSH-ключами - скоро появится
-                <!-- </a> -->
-            </div>
-            <div class="guide-item">
-                <a href="change-dns/" target="">
-                    9. Смена DNS сервера
-                </a>
-            </div>
-            <div class="guide-item">
-                <!-- <a href="" target=""> -->
-                    10. Описание пользовательского интерфейса - скоро появится
-                <!-- </a> -->
             </div>
         </section>
 
         <div class="block block-footer">
             <div class="block-footer-inner">
-                <img src="/img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
+                <img src="../img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
                 <div class="download download-footer">
                     <a class="btn btn-footer" id="main-link-footer" href="#">Скачать приложение</a>
                     <div class="text text-small text-footer">
                         <span class="text-os" id="link-footer">Для Windows. Полностью бесплатно.</span>
                     </div>
                 </div>
-                <div class="text text-footer"><img src="/img/github.svg" class="img-github" width="20" height="20"/>
+                <div class="text text-footer"><img src="../img/github.svg" class="img-github" width="20" height="20"/>
                     <a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Исходный код на Github</a>
                 </div>
-                <img src="/img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
+                <img src="../img/graduate.svg" class="logo logo-graduate" width="107" height="67"
+                     alt="Выпускник Privacy Accelerator"/>
             </div>
         </div>
     </section>
-    <script src="/fotorama-to-guides.js"></script>
+    <script src="../fotorama-to-guides.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </body>

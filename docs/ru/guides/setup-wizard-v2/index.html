@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Автоматическая установка | Amnezia. Ваш персональный приватный VPN</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#100A44">
+    <meta name="theme-color" content="#100A44">
+
+    <!--
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Amnezia"/>
+        <meta property="og:url" content="https://yandex.ru/"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА САЙТ
+        <meta property="og:image" content="https://openrunet.org/img/OG-image.png"/> !!!!!!1 ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta property="og:site_name" content="Amnezia">
+        <meta property="og:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:title" content="Amnezia"/>
+        <meta name="twitter:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:image" content="https://openrunet.org/img/OG-image.png"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@RAmnezia"/>
+        -->
+</head>
+
+<body>
+    <section class="instruction" id="instruction">
+        <div class="block-top-wrapper">
+            <div class="block block-top-guide">
+                <div class="section_in">
+                    <div class="block-top-inner">
+                        <a href="/index.html" class="href href-logo">
+                            <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
+                        </a>
+                        <h2 class="header header-block-top">Установка с помощью - Run Setup Wizard</h2>
+
+                    </div>
+                    <div class="lang_block">
+                        <div class="lang_title"><span>Русский</span><span>Ru</span>
+                            <div class="lang_arrow_w">
+                                <img src="/img/icons/angle-right.svg" alt="" class="lang_arrow">
+                            </div>
+                        </div>
+                        <ul class="lang_list">
+                            <li class="lang_item">
+                                <a href="https://en.amnezia.org/guides/setup-wizard-v2/"
+                                   class="lang_link">
+                                    <span>English</span>
+                                    <span>En</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-1-inner">
+                <h2 class="header header-step">
+                    От VPS провайдера на указанную почту придут данные для подключения
+                </h2>
+                <p>Это может занять некоторое время.</p>
+                <p>Там должны быть:</p>
+                <table class="mini-table text-step">
+                    <tr>
+                        <td class="price">Server IP:</td>
+                        <td class="price">192.565.ххx.xxx</td>
+                    </tr>
+                    <tr>
+                        <td class="price">User name:</td>
+                        <td class="price">root  (или другое)</td>
+                    </tr>
+                    <tr>
+                        <td class="price">Password или SSH-key:</td>
+                        <td class="price">2f9legf2... </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+          <div class="step-2-inner">
+              <h2 class="header header-step">Установите
+                  <a id="btnAnchor" href="#main-link-footer">приложение Amnezia</a> и запустите его.
+              </h2>
+
+              <div class="instr-section-grid-image-text text-step">
+                  <div class="instr-section-grid__image-col">
+                      <img src="./screens/wiz1.png" alt=""/>
+                  </div>
+                  <div class="instr-section-grid__text-col">
+                      <div>
+                          <div class="text">
+                              На первом экране внизу выберете <span class="price">Set up your own server</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="block block-guide-step">
+          <div class="step-2-inner">
+              <h2 class="header header-step">Далее внесите данные для подключения и нажмите Connect</h2>
+
+              <div class="instr-section-grid-image-text text-step">
+                  <div class="instr-section-grid__image-col">
+                      <img src="./screens/wiz2.png" alt=""/>
+                  </div>
+                  <div class="instr-section-grid__text-col">
+                      <div>
+                          <div class="text">
+                              Если имя пользователя не указано,
+                              впишите root
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="text text-step">
+                  *если вы меняли порт для SSH, укажите его через двоеточие после IP
+              </div>
+              <div class="text text-step">
+                  **если вместо пароля у вас  SSH-ключ,  выберете  “Connect using SSH key”
+              </div>
+          </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Выберите вариант установки</h2>
+                <div class="text">
+                    Выберете
+                    <span class="price">Run Setup Wizard</span> (мастер установки)
+                </div>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/wiz3.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text text-step">
+                                <span class="price">Run
+                                    Setup Wizard</span> это <span class="price">простая
+                                установка</span>.
+                                Далее вам нужно будет выбрать наиболее
+                                подходящий вариант защиты.
+                            </div>
+                            <div class="text">
+                                При выборе <a href="https://ru.amnezia.org/guides/setup-manual-v2/"
+                                              target="_blank">Configure VPN protocols manually</a>
+                                вы сможете самостоятельно выбрать
+                                <span class="price">протокол из списка и дополнительные настройки</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    *Если вы хотите воспользоваться ручной настройкой или с первого подключения установить другие
+                    VPN протоколы, такие как <span class="price">Wireguard</span> или <span
+                  class="price">IKEv2 (IPsec)</span>
+                    используйте <a href="https://ru.amnezia.org/guides/setup-manual-v2/"
+                    target="_blank">пошаговую инструкцию к
+                    Configure VPN protocols manually</a>, вы так же сможете добавить эти протоколы
+                    позднее, после установки.
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Run Setup Wizard (Мастер установки) </h2>
+                <div class="text text-step">
+                    Вам необязательно использовать протокол, который вы сейчас установите,
+                    <span class="price">После установки Вы сможете удалить ненужные протоколы и добавить любые новые.</span>
+                </div>
+                <div class="text text-step">
+                    Если в вашем регионе <span class="price">очень высокий уровень цензуры</span>, заблокированы и сайты и VPN сервисы, советуем с
+                    первого подключения выбирать High censorship level, так как в случае обнаружения у вас VPN, адрес вашего
+                    <span class="price">VPS могут заблокировать.</span>
+                </div>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/wiz4.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text text-step">
+                                <span class="price">High censorship level</span>. Высокий уровень цензуры. Предназначено
+                                для случаев когда Вы не хотите,
+                                чтобы ваш трафик определялся как общение с VPN. Будет установлен контейнер с
+                                <a href="https://ru.amnezia.org/guides/protocols-info-v2/"
+                                   target="_blank">OpenVPN и Cloak</a>.
+                            </div>
+                            <div class="text text-step">
+                                <span class="price">Medium censorship level</span>. Средний уровень цензуры, сравнительно
+                                гибкое решение на случай,
+                                когда блокируются сайты, но не VPN. В данном случае на сервер будет установлен контейнер с
+                                <a href="https://ru.amnezia.org/guides/protocols-info-v2/" target="_blank">OpenVPN и ShadowSocks</a>.
+                            </div>
+                            <div class="text">
+                                <span class="price">Low censorship level</span>. Низкий уровень цензуры. Чтобы просто
+                                получить VPN для шифрования трафика
+                                (классический VPN). В данном случае на сервер будет установлен контейнер с
+                                <a href="https://ru.amnezia.org/guides/protocols-info-v2/" target="_blank">OpenVPN</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>*имейте ввиду, что как правило, чем более защищенное соединение, тем ниже скорость трафика</p>
+                <p><a href="https://ru.amnezia.org/guides/protocols-info-v2/" target="_blank">Здесь есть более подробное описание протоколов</a></p>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Далее Вам предложат выбрать для каких сайтов вы хотите использовать VPN</h2>
+                <div class="text">
+                    Выберете <span class="price">Run Setup Wizard</span> (Мастер установки)
+                </div>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/wiz5.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text text-step">
+                                Вы можете использовать VPN для всех сайтов, для всех кроме выбранных, или только для выбранных.
+                            </div>
+                            <div class="text">
+                                Вы также сможете вернуться к этой настройке после подключения.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Готово! Вы создали свой персональный VPN</h2>
+                <div class="text text-step">
+                    Теперь вы можете <span class="price">обходить блокировки</span> сайтов, <span class="price">защитить
+                    свои данные</span>,
+                    и без ограничений <span class="price">делиться вашим VPN</span> с теми, кому вы
+                    доверяете, а также <span class="price">добавлять новые протоколы</span> и еще
+                    многое другое.
+                </div>
+                <div class="text text-step">
+                    Если вы хотите большо узнать о функционале Amnezia или у вас остались вопросы обратитесь
+                    к нашим подробным инструкциям, зайдите в раздел часто задаваемых вопросов -
+                    <a href="https://ru.amnezia.org/faq/" target="_blank">FAQ
+                    </a>,
+                    или свяжитесь с нами по почте <span class="price">support@amnezia.org</span>.
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-footer">
+            <div class="block-footer-inner">
+                <img src="/img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
+                <div class="download download-footer">
+                    <a class="btn btn-footer" id="main-link-footer" href="#">Скачать приложение</a>
+                    <div class="text text-small text-footer">
+                        <span class="text-os" id="link-footer">Для Windows. Полностью бесплатно.</span>
+                    </div>
+                </div>
+                <div class="text text-footer"><img src="/img/github.svg" class="img-github" width="20" height="20"/>
+                    <a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank">Исходный код на Github</a>
+                </div>
+                <img src="/img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
+            </div>
+        </div>
+    </section>
+    <script src="/fotorama-to-guides.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</body>
+
+</html>

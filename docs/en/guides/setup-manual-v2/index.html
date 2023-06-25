@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Installing with the configure VPN protocols manually | Amnezia VPN. Your own self-hosted VPN</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#100A44">
+    <meta name="theme-color" content="#100A44">
+
+    <!--
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Amnezia"/>
+        <meta property="og:url" content="https://yandex.ru/"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА САЙТ
+        <meta property="og:image" content="https://openrunet.org/img/OG-image.png"/> !!!!!!1 ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta property="og:site_name" content="Amnezia">
+        <meta property="og:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:title" content="Amnezia"/>
+        <meta name="twitter:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:image" content="https://openrunet.org/img/OG-image.png"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@RAmnezia"/>
+        -->
+</head>
+
+<body>
+    <section class="instruction" id="instruction">
+        <div class="block-top-wrapper">
+            <div class="block block-top-guide">
+                <div class="section_in">
+                    <div class="block-top-inner">
+                        <a href="/index.html" class="href href-logo">
+                            <img src="/img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
+                        </a>
+                        <h2 class="header header-block-top">
+                            Installing with the configure VPN protocols manually
+                        </h2>
+
+                    </div>
+                    <div class="lang_block">
+                        <div class="lang_title"><span>English</span><span>En</span>
+                            <div class="lang_arrow_w">
+                                <img src="/img/icons/angle-right.svg" alt="" class="lang_arrow">
+                            </div>
+                        </div>
+                        <ul class="lang_list">
+                            <li class="lang_item">
+                                <a href="https://ru.amnezia.org/guides/setup-wizard-v2/"
+                                   class="lang_link">
+                                    <span>Русский</span>
+                                    <span>Ru</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-1-inner">
+                <h2 class="header header-step">
+                    The VPS provider will send you the connection details by email:
+                </h2>
+                <table class="mini-table text-step">
+                    <tr>
+                        <td class="price">Server IP:</td>
+                        <td class="price">192.565.ххx.xxx</td>
+                    </tr>
+                    <tr>
+                        <td class="price">User name:</td>
+                        <td class="price">root (or other)</td>
+                    </tr>
+                    <tr>
+                        <td class="price">Password or SSH-key:</td>
+                        <td class="price">2f9legf2... </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Install
+                    <a id="btnAnchor" href="#main-link-footer">Amnezia</a> client and run it.
+                </h2>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/man1.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text">
+                                On the first screen select <span class="price">Set up your own server</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+          <div class="step-2-inner">
+              <h2 class="header header-step">Enter the connection data, click Connect</h2>
+              <div class="instr-section-grid-image-text text-step">
+                  <div class="instr-section-grid__image-col">
+                      <img src="./screens/man2.png" alt=""/>
+                  </div>
+                  <div class="instr-section-grid__text-col">
+                      <div>
+                          <div class="text">
+                              If the username is not specified, enter root
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="text text-step">
+                  *if you changed the port for SSH, specify it with a colon after the IP
+              </div>
+              <div class="text text-step">
+                  **if you have an SSH key instead of a password, select “Connect using SSH key”
+              </div>
+          </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Configure VPN protocols manually</h2>
+                <div class="text">
+                    Choose
+                    <span class="price">Configure VPN protocols manually</span>
+                </div>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/man3.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text text-step">
+                                <a href="https://en.amnezia.org/guides/setup-wizard-v2/"
+                                   target="_blank">Run
+                                    Setup Wizard</a> is a <span class="price">simple installation</span>.
+                                Next, you should choose the most suitable protection option.
+                            </div>
+                            <div class="text">
+                                When selecting <span class="price">Configure VPN protocols manually</span>
+                                you will be able to choose <span class="price">protocol from the list and additional settings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-guide-step">
+            <div class="step-2-inner">
+                <h2 class="header header-step">Select the VPN protocol in the VPN containers section</h2>
+
+                <div class="instr-section-grid-image-text">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/man4.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <a href="https://en.amnezia.org/guides/protocols-info-v2/"
+                               target="_blank">Detailed description of the protocols</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instr-section-grid-image-text text-step">
+                    <div class="instr-section-grid__image-col">
+                        <img src="./screens/man5.png" alt=""/>
+                    </div>
+                    <div class="instr-section-grid__text-col">
+                        <div>
+                            <div class="text text-step">
+                                After selecting the container, you will be able to choose the TCP or UDP network protocol if the selected VPN protocol supports it.
+                            </div>
+                            <div class="text text-step">
+                                For example, OpenVPN can work with both TCP and UDP. WireGuard only works with UDP
+                            </div>
+                            <div class="text">
+                                In the case of OpenVPN over ShadowSocks, your traffic will be routed through ShadowSocks,
+                                which operates exclusively over TCP. You can also choose not to make any changes and continue with the installation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text text-step">
+                    *If AmneziaVPN fails to connect to the configured server, you need to ensure that the port is open and available for use with the selected protocols.
+                    For most hosting providers, direct access is available to your VPS, so everything should work by default.
+                    However, with larger providers like Oracle Cloud, Amazon Web Services,
+                    Microsoft Azure, Google Cloud Platform, and others, servers may be behind NAT and/or firewalls. In such cases, you will need to go to the control panel,
+                    select network settings, and open the chosen port for your VPS.
+                </div>
+                <div class="text">
+                    Here is a list of ports based on censorship levels:
+                    <ul>
+                        <li>Low censorship level uses <span class="price">UDP port 1194</span></li>
+                        <li>Medium censorship level uses <span class="price">TCP port 6789</span></li>
+                        <li>High censorship level uses <span class="price">TCP port 443</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block-success">Ready!</div>
+
+        <div class="block block-footer">
+            <div class="block-footer-inner">
+                <img src="/img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
+                <div class="download download-footer">
+                    <a class="btn btn-footer" id="main-link-footer" href="#">Download Amnezia</a>
+                    <div class="text text-small text-footer">
+                        <span class="text-os" id="link-footer">Completely free.</span>
+                    </div>
+                </div>
+                <div class="text text-footer"><img src="/img/github.svg" class="img-github" width="20" height="20"/>
+                    <a href="https://github.com/amnezia-vpn/desktop-client/"
+                       target="_blank">Source code on Github</a>
+                </div>
+                <img src="/img/graduate.svg" class="logo logo-graduate" width="107" height="67"
+                     alt="Graduate Privacy Accelerator"/>
+            </div>
+        </div>
+    </section>
+    <script src="/fotorama-to-guides.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</body>
+
+</html>

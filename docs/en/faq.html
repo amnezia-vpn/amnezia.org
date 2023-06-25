@@ -1,54 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Amnezia VPN. Yuor personal self-hosted VPN</title>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
-    <link rel="manifest" href="site.webmanifest"/>
+<html lang="ru" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+
+<head>
+	<title>FAQ | Amnezia VPN. Your own self-hosted VPN</title>
+	
+	<!-- header -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="msapplication-config" content="browserconfig.xml"/>
-    <meta name="msapplication-TileColor" content="#100A44"/>
-    <meta name="theme-color" content="#100A44"/>
-    <link rel="stylesheet" media="all" href="styles/main_global.css"/>
-  </head>
-  <body>
-    <div class="body_decor_w desktop_mod"> <img class="body_decor" src="i/body_decor.svg" alt="Decor"></div>
-    <div class="body_decor_w mobile_mod"> <img class="body_decor" src="i/body_decor_mob.svg" alt="Decor"></div>
-    <header class="header">
-      <div class="header_in"><a class="header_logo_w" href="https://en.amnezia.org/"><img class="section_img" src="i/logo.svg" alt="logo"/></a>
-        <div class="header_lang">
-          <div class="lang_block">
-            <div class="lang_title"><span>English</span><span>En</span>
-              <div class="lang_arrow_w">
-                <svg class="icon icon-angle-down size_mod">
-                  <use xlink:href="i/sprite/sprite.svg#angle-down"></use>
-                </svg>
-              </div>
+    <meta name="msapplication-TileColor" content="#100A44">
+    <meta name="theme-color" content="#100A44">
+
+    <!--
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Amnezia"/>
+        <meta property="og:url" content="https://yandex.ru/"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА САЙТ
+        <meta property="og:image" content="https://openrunet.org/img/OG-image.png"/> !!!!!!1 ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta property="og:site_name" content="Amnezia">
+        <meta property="og:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:title" content="Amnezia"/>
+        <meta name="twitter:description" content="Ваш персональный приватный VPN"/> !!! ОПИСАНИЕ
+        <meta name="twitter:image" content="https://openrunet.org/img/OG-image.png"/>  !!!!!! ДОБАВИТЬ ССЫЛКУ НА КАРТИНКУ
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@RAmnezia"/>
+        -->
+        
+	<!-- end header -->	
+</head>
+
+<body>
+    <section class="about" id="faq">
+		
+		<!-- top -->
+        <div class="block-top-wrapper">
+            <div class="block block-top">
+                <div class="section_in">
+                    <div class="block-top-inner">
+                        <a href="index.html" class="href href-logo">
+                            <img src="img/logo.svg" class="logo logo-personal" width="150" height="15" alt="Amnezia"/>
+                        </a>
+                        <h2 class="header header-block-top">FAQ</h2>
+                    </div>
+                    <div class="lang_block">
+                        <div class="lang_title"><span>English</span><span>En</span>
+                            <div class="lang_arrow_w">
+                                <img src="img/icons/angle-right.svg" alt="" class="lang_arrow">
+                            </div>
+                        </div>
+                        <ul class="lang_list">
+                            <li class="lang_item">
+                                <a href="https://ru.amnezia.org/faq.html" class="lang_link">
+                                    <span>Русский</span>
+                                    <span>Ru</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <ul class="lang_list">
-              <li class="lang_item"><a class="lang_link" href="https://ru.amnezia.org/faq.html"><span>Русский</span><span>Ru</span></a></li>
-            </ul>
-          </div>
         </div>
-      </div>
-    </header>
-    <div class="wrapper en">
-      <div class="base en">
-        <section class="section">
-          <div class="section_in"> 
-            <div class="section_block hero_mod">
-              <h1 class="section_title h1_mod">Frequently asked <br>questions</h1>
-            </div>
-            <div class="section_block">
-              <ul class="faq_list">
+		<!-- end top -->
+
+        <div class="block block-guide-step">
+			
+			<!-- faq -->
+			<div class="section_block">
+              <ul class="faq-list">
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3 class="section_title">Question №1</h3>
+                    <h3>Is Amnezia a VPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>No, Amnezia is not a VPN. It is software that allows you to set up and use your own VPN.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Is Amnezia free?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Yes, Amnezia is completely free software. You do not connect to our servers or pay us anything.
+                      However, to create your own VPN, you will need to purchase any VPS from any provider or use an existing one.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Which devices and operating systems does Amnezia work on?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Currently, there are versions available for Windows, macOS, Android, iOS, and Linux.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Does Amnezia collect user data?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>Amnezia does not collect or transmit any statistics, logs, analytics, or other user information.
+                      The only data requested by the client is connection data.
+                      These data are also not collected or transmitted, which can be verified thanks to the
+                      <a href="https://github.com/amnezia-vpn/">open-source</a> nature of both the server and client software.</p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>How does Amnezia work?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      You provide the IP address, login, and password of your server. The
+                      application connects to the server via SSH,
+                      installs Docker, and launches Amnezia server containers. Separate containers are created for each connection protocol,
+                      and keys and root certificates are generated. Once the server is configured, you can connect to it via VPN.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Why is Amnezia more resistant to blocking than other VPN?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      The larger and more popular a commercial VPN service is, the higher the likelihood of it coming under the scrutiny of
+                      surveillance agencies, which in turn increases the chances of access to its servers and protocols being blocked.
+                      With Amnezia, you can create your own VPN based on any VPS for your personal use only. By using your own VPS in conjunction
+                      with encrypted VPN protocols, the likelihood of blocking is significantly reduced. This is confirmed by our users in countries
+                      with high levels of censorship.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>
+                      What are the advantages of Amnezia and other Self-hosted VPN services over
+                      regular VPN?
+                    </h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">Full Control</span> - you have full control over your
+                      own VPN server, including configuration, security, logging, and data access.
+                      You have the ability to choose the configuration, encryption protocols and security
+                      settings according to your requirements.
+                    </p>
+                    <p>
+                      <span class="price">High performance</span> - self-hosted VPN can offer
+                      better speed and performance because you control the server resources and can customize it to your needs.
+                      This is especially useful if you have a large number of users or require high bandwidth.
+                    </p>
+                    <p>
+                      <span class="price">Bypass restrictions</span> - many sites know the IP
+                      addresses of popular VPN servers and blacklist them. By purchasing a separate VPS,
+                      your IP address is only known to you and the people with whom you have shared the connection details.
+                    </p>
+                    <p>
+                      <span class="price">Mobility</span> - the ability to use your configured
+                      VPN not only with the Amnezia client but also with other self-hosted applications that support selected VPN protocols.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>I downloaded the app, what's next?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Once you have downloaded the app, you need to enter your VPS details. You can use your existing VPS or buy a new one. As an example,
+                      <a href="https://ru.amnezia.org/instruction.html">здесь</a> are the
+                      instructions for buying a VPS on several popular hostings.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>I want to buy a VPS, what options should I choose?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Amnezia works with any KVM virtualization servers running Ubuntu (officially supported version is 20.04) and Debian 10.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Why do I need a server with KVM?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Amnezia uses Docker to stand-alone your VPN server deployment. Not every
+                      type of virtualization can
+                      be used with Docker, but KVM definitely allows it. Other types of virtualization may not work with Docker,
+                      either due to the limitations of the specific virtualization type or due to configuration from the VPS vendor.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Which VPN protocol to choose?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">IMPORTANT!</span> If your country has a very high level of control, access to many sites is blocked,
+                      no commercial and free VPN and VPN protocols work, we recommend using
+                      <span class="price">OpenVPN over Cloak</span>, from the first connection, because using other protocols,
+                      your personal VPN can also be blocked, and you will have to purchase a new VPS.
+                    </p>
+                    <p>
+                      For all other users, the optimal combination of speed and encryption level will be <span class="price">WireGuard</span>
+                      You can also use the slightly slower but well-studied and time-tested <span
+                      class="price">OpenVPN</span> protocol. You can either use it alone, or in
+                      combination with <span class="price">ShadowSocks</span> or <span
+                      class="price">Cloak</span>.
+                    </p>
+                    <p>
+                      <span class="price">ShadowSocks</span> will practically not reduce the speed and add traffic masking as HTTPS traffic, but only between the user and the proxy connection.
+                    </p>
+                    <p>
+                      <span class="price">Cloak</span> can greatly affect traffic speed.
+                      Disguises the proxy server and proxy traffic as HTTPS traffic, when attempting to intercept,
+                      redirects the attacker to a false website, it is difficult to detect and block it.
+                      Recommended for use in countries where other VPNs do not work.
+                    </p>
+                    <p>
+                      <span class="price">IKEv2</span> has excellent traffic and connection
+                      speed, it is ideal if fast switching between devices is important to you.
+                    </p>
+                    <p>
+                      The choice of the best option depends only on your needs.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>What is Kill Switch? </h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <span class="price">Kill switch</span> — is an emergency internet disconnect feature integrated into the VPN app.
+                      In the event of an unexpected disconnection of your VPN connection, the VPN <span class="price">kill switch</span> feature will automatically disconnect you from the Internet.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>I want to use a VPN, but not for all sites. What can be done?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Amnezia has a feature with which you can add exclusion sites to the list in order to visit them from your IP address,
+                      it is available on the main screen when connected.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Can I use key authentication for Amnezia?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      It is possible, authorization is supported both by password and by keys. Supported OpenSSH key types: RSA (2048, 3072, 4096) and ECDSA (nistp256)
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Can I share my connection with other people?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Yes, you can share connection data with anyone you trust. Use one VPS for an unlimited number of users.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Purpose "Clear client cached profile".</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      By default, Amnezia caches data (certificates and keys) from a configured VPN server to quickly connect directly to the server.
+                      This button resets this cache, as a result, new certificates with keys will be generated, which will be placed on the server via an SSH connection,
+                      and only then will the connection occur. It must be used when changing the server (if installed on several VPS), when updating the client or server.
+                      May be required when changing container settings.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>I want to change the DNS server. How to do it?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      <a href="https://en.amnezia.org/guides/change-dns-v2/">Instructions for
+                        changing the DNS server.</a>
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Amnezia throws an error. What to do?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Contact the developers (support@amnezia.org or in the Telegram chat) by providing them with the logs of the program.
+                    </p>
+                    <div>
+                      You can get the logs in the following ways:
+                    </div>
+                    <p><span class="price">On Windows:</span></p>
+                    <ul>
+                      <li>
+                        - C:\Users\%USERNAME%\AppData\Roaming\AmneziaVPN.ORG\AmneziaVPN\log
+                      </li>
+                      <li>
+                        - C:\ProgramData\AmneziaVPN\log
+                      </li>
+                    </ul>
+                    <p><span class="price">On MacOS:</span></p>
+                    <ul>
+                      <li>
+                        - /$HOME/Library/Application\ 	Support/AmneziaVPN.ORG/AmneziaVPN/
+                      </li>
+                      <li>
+                        - /var/log/AmneziaVPN/AmneziaVPN-service.log
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Can I use my new VPN on other apps?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Yes. If you have connected at least once through Amnezia, then Amnezia has configured a VPN for
+                      you and you can connect to your VPN through other applications.
+                      <a href="https://en.amnezia.org/guides/alt-clients/">See here for more details.</a>.
+                    </p>
+                  </div>
+                </li>
+                <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Why can't you use VPS from public sources?</h3>
+                    <div class="faq_title_btn"></div>
+                  </div>
+                  <div class="faq_content">
+                    <p>
+                      Connection data may have been made public for the purpose of intercepting your traffic and personal data.
+                      For a secure connection, we advise you to use a VPS purchased from a trusted VPS provider, or data that was transferred to you by a person you trust.
+                    </p>
+                  </div>
+                </li>
+                <!-- Predefined templates for FAQ <li class="faq_item">
+                  <div class="faq_title_w">
+                    <h3>Вопрос №1</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
@@ -58,7 +392,7 @@
                 </li>
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3 class="section_title">Question №2</h3>
+                    <h3>Вопрос №2</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
@@ -68,54 +402,75 @@
                 </li>
                 <li class="faq_item">
                   <div class="faq_title_w">
-                    <h3 class="section_title">Question №3</h3>
+                    <h3>Вопрос №3</h3>
                     <div class="faq_title_btn"></div>
                   </div>
                   <div class="faq_content">
                     <p>3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices consequat eu a rutrum egestas turpis ut volutpat. Id a convallis eleifend gravida arcu nec. Volutpat neque egestas diam augue mi accumsan justo magna. Donec sit laoreet elementum, porttitor id tellus.</p>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
-          </div>
-        </section>
-      </div>
-      
-      
-      <!-- footer -->
+            <!-- end faq -->
+			
+                <!-- example
+                <h2 class="header header-step">Шаг 1. Купите сервер, если его у вас нет</h2>
+                <div class="text text-step">
+                    Чтобы вам было удобней, мы подобрали несколько компаний, чьи серверы
+                    удовлетворяют требованиям к&nbsp;VPN:
+                    серверы располагаются не в России, неограниченный трафик и низкая стоимость.
+                    Вы можете выбрать любой другой сервис на своё усмотрение. Amnezia работает с любыми серверами с
+                    операционой системой
+                    <b> Ubuntu (официально поддерживаемая версия - 18.04), так же поддерживается Debian (10).</b>
+                    <p>Провайдер Inferno Solutions поддерживает автоматическую настройку сервера и генерацию простой ссылки
+                        для подключения для клиента Amnezia VPN.
+                </div>
+                -->
+        </div>
+
+       
+
+
+		<!-- footer -->
 		<div class="block block-footer">
 			<div class="block-footer-inner">
-				<img src="img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia" />
+				<img src="img/logo-footer.svg" class="logo logo-footer" width="290" height="30" alt="Amnezia"/>
 				<div class="download download-footer">
-					<a class="btn btn-footer" id="main-link-footer" href="https://github.com/amnezia-vpn/desktop-client/releases/latest">Download Amnezia</a>
-					<div class="text text-small text-footer">
-						<span class="text-os" id="link-footer">Completely free</span>
-					</div>
+					<a class="btn btn-footer" id="main-link-footer" href="https://github.com/amnezia-vpn/desktop-client/releases/latest">Скачать Amnezia</a>
+					<div class="text text-small text-footer"><span class="text-os" id="link-footer">Полностью бесплатно</span></div>
 				</div>
 				
 				<!--<div class="text text-footer"></div>-->
-			
+				
 				<div>
 					<a href="https://github.com/amnezia-vpn/desktop-client/" target="_blank"><img src="img/github.svg" class="footer-logo" width="67" height="67" alt="Source code on Github" /></a>
-					<a href="https://t.me/amnezia_vpn_en" target="_blank"><img src="img/telegram.svg" class="footer-logo" width="67" height="67" alt="Telegram: https://t.me/amnezia_vpn_en" /></a>
+					<a href="https://t.me/amnezia_vpn" target="_blank"><img src="img/telegram.svg" class="footer-logo" width="67" height="67" alt="Telegram: https://t.me/amnezia_vpn" /></a>
 					<a href="https://signal.group/#CjQKIB2gUf8QH_IXnOJMGQWMDjYz9cNfmRQipGWLFiIgc4MwEhAKBONrSiWHvoUFbbD0xwdh" target="_blank"><img src="img/signal.svg" class="footer-logo" width="67" height="67" alt="Signal: https://signal.group" /></a>
+          <a href="https://www.reddit.com/r/AmneziaVPN/" target="_blank"><img
+            src="img/reddit-logo.svg" class="footer-logo" width="67" height="67"
+            alt="Reddit: https://www.reddit.com/r/AmneziaVPN/" /></a>
 				</div>
 				
-				<a href="https://privacyaccelerator.org/en" target="_blank">
-					<img src="img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Privacy Accelerator graduate"/>
+				<a href="https://privacyaccelerator.org/" target="_blank">
+					<img src="img/graduate.svg" class="logo logo-graduate" width="107" height="67" alt="Выпускник Privacy Accelerator"/>
 				</a>
-				
+
 			</div>
 		</div>
 		<!-- end footer -->
-      
-      
-      
-      
-    </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    
+    </section>
+    
+    <!-- only for faq page -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
-  </body>
+    <!-- end only for faq page -->
+    
+    <script src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+</body>
+
 </html>

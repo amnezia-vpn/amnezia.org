@@ -51,7 +51,8 @@
                         </div>
                         <ul class="lang_list">
                             <li class="lang_item">
-                                <a href="https://en.amnezia.org/instruction.html" class="lang_link">
+                                <a href="https://en.amnezia.org/guides/alt-clients/"
+                                   class="lang_link">
                                     <span>English</span>
                                     <span>En</span>
                                 </a>
@@ -65,21 +66,8 @@
         <div class="block block-guide-step">
             <div class="step-1-inner">
                 <h2 class="header header-step">Для чего этот список?</h2>
-                <div class="text text-step">
-                    AmneziaVPN довольно молодой проект и развивается не так быстро, как хотелось бы. Основной упор сейчас идет на ПК версию для платформ Windows и MacOS. На момент релиза 2.0.8 имеются:
-                    <ul>
-                        <li>
-                            версия под Windows (32-битная и 64-битная для архитектуры x86)
-                        </li>
-                        <li>
-                            версия под MacOS (64-битная для архитектуры x86)
-                        </li>
-                        <li>
-                            версия под Android
-                        </li>
-                    </ul>
-                    Востребованных устройств, очевидно, больше, но невозможно сделать для всех сразу. Поэтому ниже Вы сможете найти клиенты для различных платформ для протоколов, настраиваемых в AmneziaVPN.
-                </div>
+                <p class="text">Вам не обязательно пользоваться VPN, созданным Amnezia с клиента
+                    Amnezia. Ниже Вы сможете найти альтернативные клиенты для различных платформ для протоколов.</p>
             </div>
         </div>
 
@@ -88,7 +76,8 @@
                 <h2 class="header header-step">Клиенты для "OpenVPN"</h2>
                 <div class="text text-step">
                     <p>
-                        <b>OpenVPN Connect</b> - официальный клиент для данного протокола под все основные платформы.
+                        <b>OpenVPN Connect</b> - официальный клиент для протокола OpenVPN под все
+                        основные платформы.
                         <ul>
                             <li>
                                 <a href="https://openvpn.net/client-connect-vpn-for-windows/" target="_blank">Версия для Windows</a> - подойдет для Windows 7 и новее. Поддержка ARM архитектуры не уточняется 
@@ -111,7 +100,8 @@
                         <b>OpenVPN for Android</b> - сторонний клиент, предоставляющий доступ к большему количеству настроек и поддерживающий чуть более старую версию - Android 4.1 и выше.
                         <ul>
                             <li>
-                                <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">Версия с Google Play</a> - подойдет для большинства
+                                <a
+                                  href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn" target="_blank">Версия с Google Play</a> - подойдет для большинства случаев
                             </li>
                             <li>
                                 <a href="https://f-droid.org/ru/packages/de.blinkt.openvpn/" target="_blank">Версия с F-droid</a> - подойдет тем, у кого нет сервисов Google на устройстве
@@ -176,7 +166,11 @@
                 <h2 class="header header-step">Клиенты для "OpenVPN over Cloak"</h2>
                 <div class="text text-step">
                     <p>
-                        <b>Cloak</b> - плагин для обфускации траффика и использования вместе с другими протоколами. AmneziaVPN использует OpenVPN over Cloak для ПК, но так же содержит в контейнере Shadowsocks для обеспечения возможности подключиться с мобильных устройств. Официальным каналом распространения плагина являются релизы на Github (рекомендуется использовать функцию поиска по странице):
+                        <b>Cloak</b> - плагин для обфускации траффика и использования вместе с
+                        другими протоколами. AmneziaVPN использует OpenVPN over Cloak для ПК, но
+                        так же содержит в контейнере Shadowsocks для возможности использовать
+                        через сторонний клиент Shadowsocks.
+                        устройств. Официальным каналом распространения плагина являются релизы на Github (рекомендуется использовать функцию поиска по странице):
                         <ul>
                             <li>
                                 <a href="https://github.com/cbeuw/Cloak/releases" target="_blank">Для ПК платформ</a>
@@ -240,7 +234,7 @@
 
         <div class="block block-guide-step">
             <div class="step-2-inner">
-                <h2 class="header header-step">Клиенты для "IPSec"</h2>
+                <h2 class="header header-step">Клиенты для "IPSec" (IKEv2)</h2>
                 <div class="text text-step">
                     AmneziaVPN в контейнере с IPSec использует IKEv2 и предоставляет экспорт конфигов для:
                     <ul>

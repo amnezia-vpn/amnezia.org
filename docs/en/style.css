@@ -1083,4 +1083,120 @@ h3 {
   line-height: 1.4; }
   @media screen and (max-width: 767px) {
     .faq_content {
-      font-size: 1.3rem; /* 1.6rem */ } }
+      font-size: 1.3rem; /* 1.6rem */
+    }
+  }
+
+.mini-table td {
+  padding-right: 1rem;
+}
+
+.instr-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .instr-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.instr-section__image {
+  width: 300px;
+  max-width: 100%;
+}
+
+.instr-section__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  padding: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .instr-section__text {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+.instr-section-dual-img {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  gap: 4rem;
+}
+
+.instr-section-dual-img__col {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .instr-section-dual-img {
+    flex-direction: column;
+    align-items: center;
+  }
+  .instr-section-dual-img__col {
+    align-items: center;
+  }
+}
+
+.protocols-table_container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.protocols-table_container img {
+  width: 800px;
+  max-width: 100%;
+}
+
+/* INSTRUCTIONS GRID */
+
+.instr-section-grid-image-text {
+  display: grid;
+  grid-template-columns: 300px auto;
+  column-gap: 40px;
+}
+
+.instr-section-grid__text-col {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.instr-section-grid__image-col img {
+  width: 300px;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 980px) {
+  .instr-section-grid-image-text {
+    grid-template-columns: auto;
+    column-gap: 0;
+  }
+  .instr-section-grid__image-col {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.instr-section-image-image {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+
+
+
+
