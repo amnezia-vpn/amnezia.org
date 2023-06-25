@@ -360,6 +360,17 @@ h2 {
   margin-top: 60px;
 }
 
+.download-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+
+.text-instruction {
+  margin-bottom: 10px;
+}
+
 .images_app-provider {
   display: flex;
   flex-direction: row;
@@ -769,6 +780,7 @@ h3 {
   .download-app {
     display: flex;
     flex-direction: row;
+    align-items: start;
     margin: 60px 0;
   }
 
@@ -806,8 +818,9 @@ h3 {
   }
 
   .text-instruction {
-    width: 210px;
+    width: 150px;
     padding: 10px;
+    text-align: center;
   }
 
   .header-how-work {
